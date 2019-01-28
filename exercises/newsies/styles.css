@@ -4,7 +4,10 @@
     background: lightgray;
     margin-top: 20px;
     margin-bottom: 40px; 
-    border: 10px solid navy;   
+    border: 10px solid navy; 
+    font-family: 'Slabo 27px', serif;
+    font-weight: 999;
+
 }
 
 .title{ 
@@ -26,7 +29,7 @@ img{
     border: 10px solid navy;
 }
 
-p{
+.article{
     display: inline-block;
     width: 30%;
     vertical-align: top;
@@ -37,4 +40,41 @@ p{
 .border2{
     border: 20px solid black;
     width: 100%;
+}
+
+.ads{
+    column-count: 3;
+}
+
+.border3{
+    border: 3px solid navy;
+}
+
+span{
+    text-align: justify
+}
+
+
+.cAds2{ 
+    border-style: dotted;
+    border-width: 4px;
+}
+
+.cAds3{
+    background-color: black;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.article, .cAds, .cAds2{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+}
+
+.cAds4{
+    font-style: italic;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
 }
