@@ -73,21 +73,22 @@
 
 function frequentChar(str){
     var letters = str.split("");
-    var mostFrequentLetter = letters[0];
     var counter = 0;
     var times = 0;
-    for(var i = 1; i < letters.length; i++){
-        if (mostFrequentLetter == letters[i]){
-            counter++;
-            console.log("counter: " + counter);
-            console.log("times: " + times);
-            if (times < counter){
-                mostFrequentLetter = letters[i];
-                times = counter;
-            }
+    var mostFrequentLetter;
+    for(var i = 0; i < letters.length - 1; i++){
+        for(var j = i + 1; j < letters.length; j++){
+            
+            if (letters[i] === letters[j]){
+                counter++;
+                if (times < counter){
+                    mostFrequentLetter = letters[j];
+                    times = counter;
+                }
+            } 
         }
-        }
-        return mostFrequentLetter;
+    }
+    return mostFrequentLetter;
 }
 
-console.log (frequentChar("Hey google, sing me a song."));
+console.log(frequentChar("Hey google, sing me a song."));
