@@ -1,0 +1,16 @@
+body{
+        text-align: center;
+        background-color: cadetblue
+}
+
+#add, #sub, #mult{
+    color: crimson;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#addMessage, #subtractMessage, #multiplyMessage{
+    color: darkgreen;
+    padding: 20px;
+    font-size: 20px;
+}

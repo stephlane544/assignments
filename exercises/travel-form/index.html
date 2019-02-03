@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Travel</title>
+</head>
+<body>
+    <form name="travelForm">
+
+        <div id="first"> First Name: <input id="name1" class="box" type="text"/></div>
+ 
+        <div id="second">Second Name: <input id="name2" class="box" type="text"/></div>
+
+        <div id="age">        Age: <input id="age1" class="box" type="number"/>    </div>    
+
+        <div id="gender">    Gender:
+            male <input value="male" id="radio" type="radio">
+            female <input value="female" id="radio" type="radio"/>
+        </div>
+
+        <div id="location">        Where would you like to go?
+            <select id="selector">
+                <option value = "thailand" >Thailand</option>
+                <option value = "bali" >Bali</option>
+                <option value = "greece" >Greece</option>
+                <option value = "germany" >Germany</option>
+                <option value = "portugal" >Portugal</option>
+                <option value = "spain" >Spain</option>
+            </select>
+        </div>
+        
+        <div class="diet">Dietary resitrictions: 
+            <span class="dietCSS1">Vegan:  <input name="diet" value="Vegan" id="checkbox" type="checkbox"></span>
+            <div class="dietCSS2"> Vegetarian:  <input name="diet" value="Vegetarian" id="checkbox" type="checkbox"> </div>
+            <div class="dietCSS2"> Kosher:  <input name="diet" value="Kosher" id="Kosher" type="checkbox"> </div>
+            <div class="dietCSS2"> Lactose Intolerant:  <input name="diet" value="Lactose Intolerant" id="checkbox" type="checkbox"> </div>
+            <div class="dietCSS2"> None:  <input name="diet" value="None" id="checkbox" type="checkbox"> </div>
+        </div>
+
+        <button name="button" id="button">Submit</button>
+    </form> 
+<script src="app.js"></script>
+</body>
+</html>

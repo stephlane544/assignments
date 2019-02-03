@@ -1,7 +1,6 @@
 
 * {
     box-sizing: border-box; 
-    font-size: 0px;
 }
 
 .franceOne, .franceTwo, .franceThree{
@@ -91,5 +90,238 @@
     position: absolute;
     margin-left: 125px;
     margin-top: 50px;
+}
+
+.sweden1{
+    margin-top: 311px;
+    background-color: blue;
+    height: 300px;
+    position: absolute;
+    width: 500px;
+}
+
+.sweden2{
+    margin-top: 420px;
+    height: 50px;
+    width: 500px;
+    background-color: yellow;
+    position: absolute;
+}
+
+.sweden3{
+    margin-top: 311px;
+    margin-left: 125px;
+    height: 300px;
+    width: 50px;
+    background-color: yellow;
+    position: absolute;
+}
+
+.gambia1{
+    background-color: red;
+    width: 500px;
+    height: 100px;
+    position: relative;
+    margin-top: 630px;
+}
+
+.gambia2{
+    background-color: blue;
+    width: 500px;
+    height: 75px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.gambia3{
+    margin-top: 30px;
+    background-color: green;
+    width: 500px;
+    height: 100px;
+    position: relative;
+}
+
+.tonga1{
+    background-color: red;
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    margin-top: 40px;
+}
+
+.tonga2{
+    height: 150px;
+    width: 200px;
+    background-color: white;
+    position: absolute;
+    margin-top: 40px;
+}
+
+.tonga3{
+    background-color:red;
+    height: 100px;
+    width: 30px;
+    position: absolute;
+    margin-left: 75px;
+    margin-top: 49px;
+}
+
+.tonga4{
+    background-color:red;
+    height: 30px;
+    width: 100px;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 84px;
+}
+
+.japan1{
+    background-color:white;
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 365px;
+}
+
+.japan2{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    position: absolute;
+    margin-left: 134px;
+    margin-top: 387px;
+}
+
+.greece1{
+    background-color:rgb(10, 101, 177);
+    height: 360px;
+    width: 600px;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 665px;
+}
+
+.greece2{
+    background-color: white;
+    height: 40px;
+    width: 200px;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 746px;
+}
+
+.greece3{
+    background-color: white;
+    height: 201px;
+    width: 40px;
+    position: absolute;
+    margin-left: 117px;
+    margin-top: 665px;
+}
+
+.greece4{
+    background-color:white;
+    height: 40px;
+    width: 400px;
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 706px;
+}
+
+.greece5{
+    background-color:white;
+    height: 40px;
+    width: 400px;
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 786px;
+
+}
+
+.greece6{
+    background-color:white;
+    height: 40px;
+    width: 600px;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 866px;
+}
+
+.greece7{
+    background-color:white;
+    height: 40px;
+    width: 600px;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 946px;
+}
+
+.niger1{
+    height: 150px;
+    width: 600px;
+    background-color: #d2481e;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 982px;
+}
+
+.niger2{
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    background-color: #d2481e;
+    position: absolute;
+    margin-left: 248px;
+    margin-top: 1150px;
+
+}
+
+.niger3{
+    height: 150px;
+    width: 600px;
+    background-color: forestgreen;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 1330px;
+}
+
+.maldives1{
+    height: 400px;
+    width: 600px;
+    background-color: #b72121;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 1531px;
+}
+
+.maldives2{
+    height: 200px;
+    width: 400px;
+    background-color: rgb(40, 95, 40);
+    position: absolute;
+    margin-left: 125px;
+    margin-top: 1624px;
+}
+
+.maldives3{
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    background-color: white;
+    position: absolute;
+    margin-left: 248px;
+    margin-top: 1648px;
+}
+
+.maldives4{
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    background-color: rgb(40, 95, 40);
+    position: absolute;
+    margin-left: 269px;
+    margin-top: 1648px;
 }
 

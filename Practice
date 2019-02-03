@@ -1,0 +1,11 @@
+function checkPalindrome(inputString) {
+    var arr = inputString.split('');
+    var arr2 = arr.reverse();
+    if (arr2 === arr){
+        return "true";
+    }else{
+        return "false";
+    }
+}
+
+console.log(checkPalindrome("abac"));

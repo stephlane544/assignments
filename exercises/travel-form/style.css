@@ -1,0 +1,52 @@
+body{
+    background-color: darkgray;
+    font-size: 30px;
+}
+#name1{
+    margin-left: 30px:
+}
+
+#name2{
+    margin-left: 30px:
+
+}
+
+#age1{
+    margin-left: 30px:
+}
+
+#first, #second, #age, #gender, #location, .diet{
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.dietCSS1{
+    margin-left: 10px;
+}
+.dietCSS2{
+    margin-left: 268px;
+    margin-top: 10px;
+}
+
+#selector{
+    font-size: 20px;
+}
+
+#radio, #checkbox{
+
+    height: 20px;
+    width: 20px;
+}  
+
+.box{
+    height: 30px;
+    width: 250px;
+}
+
+#button{
+
+    background-color: darkslategray;
+    font-size: 50px;
+    margin-left: 80px;
+    margin-top: 30px;
+}
