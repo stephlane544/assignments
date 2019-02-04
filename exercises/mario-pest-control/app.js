@@ -2,6 +2,7 @@ var sound = new Audio();
 sound.src = "Super Mario Bros.-Coin Sound Effect.mp3";
 var total = 0;
 document.getElementById("total").textContent += `${total}`;
+// You can do this ^^ in the HTML too
 
 document.getElementById("goombaButton").addEventListener("click", addToTotalGoomba);
 
