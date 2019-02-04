@@ -1,144 +1,76 @@
-body{
-    background-image: url("https://wallpapercave.com/wp/wp1907535.jpg");
-    background-size: 100%, 100%;
-    color: white;
-    font-family: 'Ruslan Display', cursive;
+* {
+    margin: 0 auto;
 }
 
-header{
-    text-align: center;
-    font-size: 100px;
-    color: white;
-}
 
-.total{
-    text-align: center;
-    font-size: 50px;
-    margin-left: -367px;
-    position: absolute;
-}
+    body{
+        background-image: url("https://wallpapercave.com/wp/wp1907535.jpg");
+        background-size: 100%, 100%;
+        color: white;
+        font-family: 'Ruslan Display', cursive;
+    }
+    
+    header{
+        text-align: center;
+        font-size: 100px;
+        color: white;
+    }
 
-.titles{
-    margin-top: 40px;
-}
+    .total{
+        display: flex;
+        justify-content: center;
+        width: 25%;
+    }
+    
+    #reset{
+        font-size: 20px;
+    }
 
-#goomba{
-    font-size: 50px;
-    margin-left: 60px;
-}
+    #total{
+        font-size: 50px;
+    }
+    
+    .titles{
+        margin-top: 40px;
+    }
 
-#bobomb{
-    font-size: 50px;
-    margin-left: 115px;
-}
+    .allPics{
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0px;
+    }
 
-#cheep{
-    font-size: 50px;
-    margin-left: 50px;
-}
-
-#goomba1{
-    height: 250x;
-    width: 250px;
-
-}
-
-#bobombs1{
-    height: 325px;
-    width: 325px;
-}
-
-#cheeps1{
-    height: 300px;
-    width: 300px;
-}
-
-#goomba1, #bobombs1, #cheeps1{
-    text-align: center;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-top: 61px;
-
-}
-
-#goombaButton{
-    background-color: #00000000;
-    margin-top: -380px;
-    height: 350px;
-    width: 270px;
-    margin-left: 80px;
-    border: none;
-}
-
-#bobombButton{
-    background-color: #00000000;
-    margin-top: -380px;
-    height: 350px;
-    width: 340px;
-    margin-left: 130px;
-    border: none;
-
-}
-
-#cheepButton{
-    background-color: #00000000;
-    margin-top: -380px;
-    height: 330px;
-    width: 310px;
-    margin-left: 150px;
-    border: none;
-
-}
-
-#reset{
-    background-color: #0000ff00;
-    border: none;
-    margin-left: 747px;
-    height: 30px;
-    width: 100px;
-    font-size: 20px;
-    color: white;
-    font-family: 'Ruslan Display', cursive;
-}
-
-.email{
-    font-size: 20px;
-    margin-left: 20px;
-}
-
-.website{
-    font-size: 20px;
-    margin-left: 90px;
-}
-
-.address{
-    font-size: 20px;
-    margin-left: 116px;
-}
-
-.address2{
-    font-size: 20px;
-    margin-left: 1063px;
-}
-
-#email2{
-    font-size: 20px;
-    margin-left: 30px;
-}
-
-#website2{
-    font-size: 20px;
-    margin-left: 13px;
-}
-
-#address{
-    font-size: 20px;
-    margin-left: 14px;
-}
-
-footer{
-    margin-top: 20px;
-    font-weight: bold;
-    color: black;
-}
-
+    .all {
+        margin-top: 120px;
+        width: 450px; 
+        height: 350px;
+    }
+    
+    #goombaButton{
+        width: 250px;  
+    }
+    
+    #bobombButton{
+        width: 325px;
+        margin-top: -20px;
+    }
+    
+    #cheepButton{
+        width: 300px;
+    }
+    #cheepButton1, #bobombButton1, #goombaButton1{
+        font-size: 40px;
+        margin-top: 45px;
+    }
+    
+    footer{
+        font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 74px;
+        font-weight: bold;
+        color: black;
+    }
+    

@@ -27,13 +27,13 @@
 
 function capitalize(str){
     var words = str.split(' ');
-    var capitalWords = [];
+    var capWprds = [];
     for (var i = 0; i < words.length; i++){
-        var capitalWord = words[i]
-        capitalWord = capitalWord.charAt(0).toUpperCase() + capitalWord.slice(1);
-        capitalWords.push(capitalWord);
+        var capFirstLetter = words[i];
+        capFirstLetter = capFirstLetter.charAt(0).toUpperCase() + capFirstLetter.slice(1);
+        capWprds.push(capFirstLetter);
         }
-    var sentence = capitalWords.join(" ");
+    var sentence = capWprds.join(" ");
     return sentence;
 }
 console.log(capitalize("hey friends! practice practice practice!"));
