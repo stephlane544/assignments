@@ -1,0 +1,40 @@
+*{
+}
+
+.header{
+    border: #252d3f 10px solid;
+    margin: -10px;
+}
+body{
+}
+#grandCanyon{
+    width: 100%;
+}
+
+#title{
+    background-color: #5b5c67;
+    font-size: 120px;
+    text-align: center;
+    color: #71331f;
+}
+
+.introSkills{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.skills{
+    font-size: 30px;
+    flex-direction: column;
+    list-style: none;
+    flex: 2;
+}
+
+.languages{}
+
+#intro{
+    font-size: 30px;
+    flex: 1;
+}
