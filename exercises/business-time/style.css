@@ -1,40 +1,683 @@
-*{
+@media (max-width: 600px){
+    .header{
+        border: #252d3f 10px solid;
+        margin: -10px;
+    }
+
+
+    body{
+        background-color: #f2dba6;
+    }
+    #grandCanyon{
+        width: 100%;
+        margin-bottom: -5px;
+    }
+
+    .dropdown-content{
+        height: 0;
+        font-size: 0;
+    }
+
+    .active{
+        text-decoration: none;
+        color: #98583b;
+        margin: 20px;
+    }
+    
+    .show{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        width: max-content;
+        background-color: #29374c;
+        text-decoration: none;
+        font-size: 30px;
+        margin-top: 66px;
+        margin-left: -10px;
+    }  
+
+    #title{
+        background-color: #5b5c67;
+        font-size: 60px;
+        text-align: center;
+        color: #71331f;
+    }
+
+    #dropbtn{
+        background: #00000000;
+        border: none;
+        position: fixed;
+        margin-top: 20px;
+    }
+
+    #dropbtn > div{
+        width: 35px;
+        height: 6px;
+        background-color: black;
+        margin: 6px 0;
+    }
+
+    .skills{
+        font-size: 30px;
+        flex-direction: column;
+        list-style: none;
+    
+        background-color: #a25434;
+        border-radius: 15%;
+        padding: 30px;
+        padding-left: 80px;
+        border: #2c280e 5px solid;
+    }
+    
+    .languages{
+        list-style: none;
+        text-align: center;
+    }
+    
+    .liBack{
+        margin-top: 20px;
+        width: 200px;
+        background-color: #7a7b7d;
+        border-radius: 20%;
+    }
+
+    #jsImg, #reactImg, #cssImg, #nodeJsImg, #htmlImg {
+        width: 0;
+    }
+    
+    #intro{
+        font-size: 30px;
+        flex: 1;
+        align-self: center;
+        margin-right: 5%;
+        border: #37435b solid 5px;
+        border-radius: 20%;
+        padding: 20px;
+        background-color: #312f12;
+        color: #a25434;
+    }
+    
+    .tools{
+        margin-top: 100px;
+        text-align: center;
+        font-size: 30px;
+        background-color: #495362;
+        border: #a25434 20px groove;
+        color: #492a1d;
+        font-weight: 500;
+    }
+
+    .toolsList{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -30px;
+    }
+    
+    .toolsList1{
+        list-style: none;
+    
+    }
+    
+    .liTools{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+        
+    .toolImg{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 230px;
+        margin-top: 20px;
+    }
+        
+    #vsCodeImg{
+        width: 50px;
+    }
+        
+    #macOSImg{
+        margin-top: -10px;
+        width: 50px;
+    }
+        
+    #slackImg{
+        margin-top: -10px;
+        width: 50px;
+    }
 }
 
-.header{
-    border: #252d3f 10px solid;
-    margin: -10px;
-}
-body{
-}
-#grandCanyon{
-    width: 100%;
+
+
+
+
+
+
+
+
+
+@media (min-width: 601px) and (max-width: 700px){
+    .header{
+        border: #252d3f 10px solid;
+        margin: -10px;
+    }
+    body{
+        background-color: #f2dba6;
+    }
+    #grandCanyon {
+        width: 100% ; 
+        margin-bottom: -5px;
+        margin-top: 44px;
+        border-top: #252d3f 10px solid;
+    } 
+    
+    #dropbtn{
+        background: #00000000;
+        border: none;
+
+    }
+    
+    .active{
+        text-decoration: none;
+        color: #3e3e13;
+        font-size: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #5b5c67;
+        margin-left: -9px;
+        position: fixed;
+        width: 102%;
+    }    
+    
+    #title{
+        background-color: #5b5c67;
+        font-size: 60px;
+        text-align: center;
+        color: #71331f;
+    }
+    
+    
+    .skills{
+        font-size: 30px;
+        flex-direction: column;
+        list-style: none;
+    
+        background-color: #a25434;
+        border-radius: 15%;
+        padding: 30px;
+        padding-left: 80px;
+        border: #2c280e 5px solid;
+    }
+    
+    .languages{
+        list-style: none;
+        text-align: center;
+    }
+    
+    .liBack{
+        margin-top: 20px;
+        width: 200px;
+        background-color: #7a7b7d;
+        border-radius: 20%;
+    }
+
+    .lists{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .languageImg{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 40px;
+        margin-top: 30px;
+    }
+
+    #jsImg{
+        width: 50px;
+    }
+    
+    #reactImg{
+        width: 150px;
+    }
+    
+    #cssImg{
+        width: 90px;
+    }
+    
+    #nodeJsImg{
+        margin-top: -20px;
+        width: 70px;
+    }
+    
+    #htmlImg{
+        margin-top: -20px;
+        width: 40px;
+    }
+    
+    #intro{
+        font-size: 30px;
+        flex: 1;
+        align-self: center;
+        margin-right: 5%;
+        border: #37435b solid 5px;
+        border-radius: 20%;
+        padding: 20px;
+        background-color: #312f12;
+        color: #a25434;
+    }
+    
+    .tools{
+        margin-top: 100px;
+        text-align: center;
+        font-size: 30px;
+        background-color: #495362;
+        border: #a25434 20px groove;
+        color: #492a1d;
+        font-weight: 500;
+    }
+    .toolsList{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -30px;
+    }
+    
+    .toolsList1{
+        list-style: none;
+    
+    }
+    
+    .liTools{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .toolImg{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 230px;
+        margin-top: 20px;
+    }
+    
+    #vsCodeImg{
+        width: 50px;
+    }
+    
+    #macOSImg{
+        margin-top: -10px;
+        width: 50px;
+    }
+    
+    #slackImg{
+        margin-top: -10px;
+        width: 50px;
+    }
 }
 
-#title{
-    background-color: #5b5c67;
-    font-size: 120px;
-    text-align: center;
-    color: #71331f;
+
+
+
+
+
+
+
+
+
+@media (min-width: 701px) and (max-width: 1119px){
+    .header{
+        border: #252d3f 10px solid;
+        margin: -10px;
+    }
+    body{
+        background-color: #f2dba6;
+    }
+    #grandCanyon {
+        width: 100% ; 
+        margin-bottom: -5px;
+        margin-top: 44px;
+        border-top: #252d3f 10px solid;
+    } 
+    
+    #dropbtn{
+        background: #00000000;
+        border: none;
+
+    }
+    
+    .active{
+        text-decoration: none;
+        color: #3e3e13;
+        font-size: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #5b5c67;
+        margin-left: -9px;
+        position: fixed;
+        width: 102%;
+    }    
+    
+    #title{
+        background-color: #5b5c67;
+        font-size: 60px;
+        text-align: center;
+        color: #71331f;
+    }
+    
+    
+    .skills{
+        font-size: 30px;
+        flex-direction: column;
+        list-style: none;
+    
+        background-color: #a25434;
+        border-radius: 15%;
+        padding: 30px;
+        padding-left: 80px;
+        border: #2c280e 5px solid;
+    }
+    
+    .languages{
+        list-style: none;
+        text-align: center;
+    }
+    
+    .liBack{
+        margin-top: 20px;
+        width: 200px;
+        background-color: #7a7b7d;
+        border-radius: 20%;
+    }
+
+    .lists{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .languageImg{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 40px;
+        margin-top: 30px;
+    }
+
+    #jsImg{
+        width: 50px;
+    }
+    
+    #reactImg{
+        width: 150px;
+    }
+    
+    #cssImg{
+        width: 90px;
+    }
+    
+    #nodeJsImg{
+        margin-top: -20px;
+        width: 70px;
+    }
+    
+    #htmlImg{
+        margin-top: -20px;
+        width: 40px;
+    }
+    
+    #intro{
+        font-size: 30px;
+        flex: 1;
+        align-self: center;
+        margin-right: 5%;
+        border: #37435b solid 5px;
+        border-radius: 20%;
+        padding: 20px;
+        background-color: #312f12;
+        color: #a25434;
+    }
+    
+    .tools{
+        margin-top: 100px;
+        text-align: center;
+        font-size: 30px;
+        background-color: #495362;
+        border: #a25434 20px groove;
+        color: #492a1d;
+        font-weight: 500;
+    }
+    .toolsList{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -30px;
+    }
+    
+    .toolsList1{
+        list-style: none;
+    
+    }
+    
+    .liTools{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .toolImg{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 230px;
+        margin-top: 20px;
+    }
+    
+    #vsCodeImg{
+        width: 50px;
+    }
+    
+    #macOSImg{
+        margin-top: -10px;
+        width: 50px;
+    }
+    
+    #slackImg{
+        margin-top: -10px;
+        width: 50px;
+    }
 }
 
-.introSkills{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
 
-.skills{
-    font-size: 30px;
-    flex-direction: column;
-    list-style: none;
-    flex: 2;
-}
 
-.languages{}
 
-#intro{
-    font-size: 30px;
-    flex: 1;
+
+
+
+
+
+
+@media (min-width: 1120px){
+    .header{
+        border: #252d3f 10px solid;
+        margin: -10px;
+    }
+    body{
+        background-color: #f2dba6;
+    }
+    #grandCanyon{
+        width: 100%;
+        margin-bottom: -5px;
+        margin-top: 58px;
+        border-top: #252d3f 10px solid;
+    }
+    
+    .active{
+        text-decoration: none;
+        color: #3e3e13;
+        font-size: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #5b5c67;
+        font-size: 50px;
+        margin-top: -50px;
+        margin-left: -10px;
+        margin-right: -10px;
+        position: fixed;
+        width: 100%;
+    }
+
+    #title{
+        background-color: #5b5c67;
+        font-size: 120px;
+        text-align: center;
+        color: #71331f;
+    }
+
+    .introSkills{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .skills{
+        font-size: 30px;
+        flex-direction: column;
+        list-style: none;
+        flex: 6;
+        margin-right: 10%;
+        margin-left: 5%;
+        background-color: #a25434;
+        border-radius: 15%;
+        padding: 30px;
+        padding-left: 80px;
+        border: #2c280e 5px solid;
+    }
+
+    .languages{
+        list-style: none;
+        text-align: center;
+    }
+
+    .liBack{
+        margin-top: 20px;
+        width: 200px;
+        background-color: #7a7b7d;
+        border-radius: 20%;
+    }
+    .languageImg{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 40px;
+        margin-top: 30px;
+    }
+    #jsImg{
+        width: 50px;
+    }
+
+    #reactImg{
+        width: 150px;
+    }
+
+    #cssImg{
+        width: 90px;
+    }
+
+    #nodeJsImg{
+        margin-top: -20px;
+        width: 70px;
+    }
+
+    #htmlImg{
+        margin-top: -20px;
+        width: 40px;
+    }
+
+    .lists{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #intro{
+        font-size: 30px;
+        flex: 1;
+        align-self: center;
+        margin-right: 5%;
+        border: #37435b solid 5px;
+        border-radius: 20%;
+        padding: 20px;
+        background-color: #312f12;
+        color: #a25434;
+    }
+
+    .tools{
+        margin-top: 100px;
+        text-align: center;
+        font-size: 30px;
+        background-color: #495362;
+        border: #a25434 20px groove;
+        color: #492a1d;
+        font-weight: 500;
+    }
+    .toolsList{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -30px;
+    }
+
+    .toolsList1{
+        list-style: none;
+
+    }
+
+    .liTools{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .toolImg{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #vsCodeImg{
+        width: 50px;
+    }
+
+    #macOSImg{
+        margin-top: -10px;
+        width: 50px;
+    }
+
+    #slackImg{
+        margin-top: -10px;
+        width: 50px;
+    }
 }

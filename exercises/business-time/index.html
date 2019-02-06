@@ -8,37 +8,71 @@
     <title>Web Development</title>
 </head>
 <body>
+    <div class="nav">  
+        <div class="dropdown"> 
+            <button id="dropbtn"> 
+                <div></div>
+                <div></div>
+                <div></div>
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" >
+                <a class="active" href="index.html">Home</a>
+                <a class="active" href="#aboutme">About Me</a>
+                <a class="active" href="#previousprojects">Previous Projects</a>
+                <a class="active" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+
     <header class="header">
-        <div id="title">Websites with Style</div>
         <img id="grandCanyon" src=IMG_3053.jpg alt="">
+        <div id="title">Websites with Style</div>
+
     </header>
+
+
 
     <div class="introSkills">    
         <div class="skills">I am a front-end and back-end web developer. I know the following languages:
-            <ul class='languages'>
-                <li id="liBack">JavaScript</li>
-                <li id="liBack">React.js</li>  
-                <li id="liBack">CSS</li>
-                <li id="liBack">Node.js</li>
-                <li id="liBack">HTML</li>
-            </ul>
-            <p>skills will help me to make a beautiful website for you that will look good on any screen size. I can also make your page do fun things with the use of JavaScript.</p>
+            <div class="lists">
+                <ul class="languages">
+                    <li class="liBack">JavaScript</li>
+                    <li class="liBack">React.js</li>  
+                    <li class="liBack">CSS</li>
+                    <li class="liBack">Node.js</li>
+                    <li class="liBack">HTML</li>
+                </ul>
+                <div class="languageImg">
+                    <img id="jsImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" alt="">
+                    <img src="https://cdn-images-1.medium.com/max/2600/1*_DOHv30w-0eI-Ysz5U47Yg.png" alt="" id="reactImg">
+                    <img id="cssImg" src="https://appendto.com/wp-content/uploads/2016/05/css3-420x210.jpg" alt="">
+                    <img id="nodeJsImg" src="https://pluralsight.imgix.net/paths/path-icons/nodejs-601628d09d.png" alt="">
+                    <img id="htmlImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="">
+                </div>
+            </div>
+            <p>These skills will help me to make a beautiful website for you that will look good on any screen size. I can also make your page do fun things with the use of JavaScript.</p>
         </div> 
 
-        <div id="intro">Let's work together to create a website that speaks to the personality of your business.</div>
+        <div id="intro">Let's work together to create a beautiful website that showcase your personality or the personality of your business.</div>
     </div>
 
     <div class="tools">
-        <p>To make websites, I employ the following tools:
-            <ul class="tools">
-                <li>Visual Studio Code</li>
-                <li>Mac OS</li>
-                <li>Slack</li>
-            </ul>
+        <p>To make websites, I make use of the following tools: <br>
+            <div class="toolsList">
+                <ul class="toolsList1">
+                    <li class="liTools">Visual Studio Code</li>
+                    <li class="liTools">Mac OS</li>
+                    <li class="liTools">Slack</li>
+                </ul>
+                <div class="toolImg">
+                        <img id="vsCodeImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1000px-Visual_Studio_Code_1.18_icon.svg.png" alt="">
+                        <img src="https://banner2.kisspng.com/20180330/otq/kisspng-macos-logo-mac-5abde876be2455.3510262615223952547788.jpg" alt="" id="macOSImg">
+                        <img id="slackImg" src="https://cdn.icon-icons.com/icons2/478/PNG/512/slack_47017.png" alt="">
+                        
+                </div>
+            </div>
         </p>
-    </div>
-    <div class="progamLanguages">I am currently programming in the following languages:
-
     </div>
 
 
