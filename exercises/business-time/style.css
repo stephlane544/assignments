@@ -4,18 +4,42 @@
         margin: -10px;
     }
 
-
     body{
         background-color: #f2dba6;
     }
-    #grandCanyon{
+
+    .imgs{
+        display: flex;
+        flex-direction: row;
+        margin-top: -7px;
+    }
+
+    .img{
         width: 100%;
         margin-bottom: -5px;
+        border-top: #252d3f 10px solid;
+    }
+
+    #me{
+        width: 61.5%;
+        height: 49%;
+        border-top: #252d3f 10px solid;
+    }
+    
+    #nephew{
+        width: 38.5%;
+        height: 49%;
+        border-top: #252d3f 10px solid;
+    }
+
+    #grandCanyon{
+        margin-top: -9px;
     }
 
     .dropdown-content{
         height: 0;
         font-size: 0;
+        text-align: center;
     }
 
     .active{
@@ -146,6 +170,83 @@
         margin-top: -10px;
         width: 50px;
     }
+
+    .aboutMe{
+        margin: 50px;
+        background-color: #495362;
+        border: #a25434 20px groove;
+        font-size: 40px;
+        border-radius: 50%;
+    }
+
+    .p1, .p2{
+        margin: 90px;
+        text-indent: 63px;
+    }
+
+    .form{
+        font-size: 40px;
+        color: #7d4129;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inputs{
+        text-align: center;
+    }
+
+    #one, #two, #three, #send{
+        margin: 30px;
+    }
+
+    #fName, #email{
+        height: 20px;
+        width: 300px;
+    }
+
+    #message{
+        height: 100px;
+        width: 400px;
+    }
+
+    #send{
+        height: 40px;
+        width: 200px;
+        font-size: 30px;
+        background-color: #7a7b7d;
+        color: #7d4129;
+    }
+
+    #fName, #email, #message, #send{
+        border-radius: 10%;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #a25434;
+        margin-top: 40px;
+    }
+
+    #twitter{
+        height: 80px;
+        width: 80px;
+        margin: 30px;
+    }
+
+    #github{
+        height: 80px;
+        width: 80px;
+        margin: 30px;
+    }
+
+    #linkedIn{
+        height: 80px;
+        width: 80px;
+        margin: 30px;
+    }
 }
 
 
@@ -165,25 +266,52 @@
     body{
         background-color: #f2dba6;
     }
-    #grandCanyon {
-        width: 100% ; 
-        margin-bottom: -5px;
+
+    .imgs{
+        display: flex;
+        flex-direction: row;
         margin-top: 44px;
+
+    }
+
+    .img{
+        width: 100%;
+        margin-bottom: -5px;
         border-top: #252d3f 10px solid;
-    } 
+    }
+
+    #me{
+        width: 61.5%;
+        height: 49%;
+        border-top: #252d3f 10px solid;
+    }
+    
+    #nephew{
+        width: 38.5%;
+        height: 49%;
+        border-top: #252d3f 10px solid;
+    }
+
+    #grandCanyon{
+        margin-top: 44px;
+    }
     
     #dropbtn{
         background: #00000000;
         border: none;
 
     }
+
+    .dropdown-content{
+        text-align: center;
+    }
     
     .active{
         text-decoration: none;
         color: #3e3e13;
         font-size: 30px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 30px;
+        margin-right: 30px;
 
     }
 
@@ -195,6 +323,7 @@
         margin-left: -9px;
         position: fixed;
         width: 102%;
+        margin-top: -8px;
     }    
     
     #title{
@@ -203,7 +332,6 @@
         text-align: center;
         color: #71331f;
     }
-    
     
     .skills{
         font-size: 30px;
@@ -323,6 +451,83 @@
     #slackImg{
         margin-top: -10px;
         width: 50px;
+    }
+
+    .aboutMe{
+        margin: 50px;
+        background-color: #495362;
+        border: #a25434 20px groove;
+        font-size: 40px;
+        border-radius: 50%;
+    }
+
+    .p1, .p2{
+        margin: 90px;
+        text-indent: 63px;
+    }
+
+    .form{
+        font-size: 40px;
+        color: #7d4129;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inputs{
+        text-align: center;
+    }
+
+    #one, #two, #three, #send{
+        margin: 30px;
+    }
+
+    #fName, #email{
+        height: 20px;
+        width: 300px;
+    }
+
+    #message{
+        height: 200px;
+        width: 500px;
+    }
+
+    #send{
+        height: 40px;
+        width: 200px;
+        font-size: 30px;
+        background-color: #7a7b7d;
+        color: #7d4129;
+    }
+
+    #fName, #email, #message, #send{
+        border-radius: 10%;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #a25434;
+        margin-top: 40px;
+    }
+
+    #twitter{
+        height: 100px;
+        width: 100px;
+        margin: 40px;
+    }
+
+    #github{
+        height: 100px;
+        width: 100px;
+        margin: 40px;
+    }
+
+    #linkedIn{
+        height: 100px;
+        width: 100px;
+        margin: 40px;
     }
 }
 
@@ -343,25 +548,50 @@
     body{
         background-color: #f2dba6;
     }
-    #grandCanyon {
-        width: 100% ; 
-        margin-bottom: -5px;
+
+    .imgs{
+        display: flex;
+        flex-direction: row;
         margin-top: 44px;
+    }
+
+    .img{
+        width: 100%;
+        margin-bottom: -5px;
         border-top: #252d3f 10px solid;
-    } 
+    }
+
+    #me{
+        width: 61.5%;
+        height: 49%;
+        border-top: #252d3f 10px solid;
+    }
+    
+    #nephew{
+        width: 38.5%;
+        height: 49%;
+        border-top: #252d3f 10px solid;
+    }
+
+    #grandCanyon{
+        margin-top: 44px;
+    }
     
     #dropbtn{
         background: #00000000;
         border: none;
 
     }
+    .dropdown-content{
+        text-align: center;
+    }
     
     .active{
         text-decoration: none;
         color: #3e3e13;
         font-size: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 70px;
+        margin-right: 70px;
 
     }
 
@@ -371,6 +601,7 @@
         justify-content: space-evenly;
         background-color: #5b5c67;
         margin-left: -9px;
+        margin-top: -8px;
         position: fixed;
         width: 102%;
     }    
@@ -502,6 +733,83 @@
         margin-top: -10px;
         width: 50px;
     }
+
+    .aboutMe{
+        margin: 50px;
+        background-color: #495362;
+        border: #a25434 20px groove;
+        font-size: 40px;
+        border-radius: 50%;
+    }
+
+    .p1, .p2{
+        margin: 90px;
+        text-indent: 63px;
+    }
+
+    .form{
+        font-size: 40px;
+        color: #7d4129;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inputs{
+        text-align: center;
+    }
+
+    #one, #two, #three, #send{
+        margin: 30px;
+    }
+
+    #fName, #email{
+        height: 20px;
+        width: 300px;
+    }
+
+    #message{
+        height: 200px;
+        width: 700px;
+    }
+
+    #send{
+        height: 40px;
+        width: 200px;
+        font-size: 30px;
+        background-color: #7a7b7d;
+        color: #7d4129;
+    }
+
+    #fName, #email, #message, #send{
+        border-radius: 10%;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #a25434;
+        margin-top: 40px;
+    }
+
+    #twitter{
+        height: 100px;
+        width: 100px;
+        margin: 40px;
+    }
+
+    #github{
+        height: 100px;
+        width: 100px;
+        margin: 40px;
+    }
+
+    #linkedIn{
+        height: 100px;
+        width: 100px;
+        margin: 40px;
+    }
 }
 
 
@@ -521,19 +829,41 @@
     body{
         background-color: #f2dba6;
     }
-    #grandCanyon{
+
+    .imgs{
+        display: flex;
+        flex-direction: row;
+        margin-top: 58px;
+    }
+
+    .img{
         width: 100%;
         margin-bottom: -5px;
-        margin-top: 58px;
         border-top: #252d3f 10px solid;
+
+    }
+
+    #me{
+        width: 61.5%;
+        height: 49%;
+        border-top: #252d3f 10px solid;
+    }
+    
+    #nephew{
+        width: 38.5%;
+        height: 49%;
+        border-top: #252d3f 10px solid;
+    }
+    #grandCanyon{
+        margin-top: 58px;
     }
     
     .active{
         text-decoration: none;
         color: #3e3e13;
         font-size: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 90px;
+        margin-right: 90px;
 
     }
 
@@ -555,6 +885,16 @@
         font-size: 120px;
         text-align: center;
         color: #71331f;
+    }
+
+    #dropbtn{
+        background: #00000000;
+        border: none;
+
+    }
+
+    .dropdown-content{
+        text-align: center;
     }
 
     .introSkills{
@@ -679,5 +1019,82 @@
     #slackImg{
         margin-top: -10px;
         width: 50px;
+    }
+
+    .aboutMe{
+        margin: 50px;
+        background-color: #495362;
+        border: #a25434 20px groove;
+        font-size: 40px;
+        border-radius: 50%;
+    }
+
+    .p1, .p2{
+        margin: 90px;
+        text-indent: 63px;
+    }
+
+    .form{
+        font-size: 40px;
+        color: #7d4129;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inputs{
+        text-align: center;
+    }
+
+    #one, #two, #three, #send{
+        margin: 30px;
+    }
+
+    #fName, #email{
+        height: 20px;
+        width: 300px;
+    }
+
+    #message{
+        height: 200px;
+        width: 700px;
+    }
+
+    #send{
+        height: 40px;
+        width: 200px;
+        font-size: 30px;
+        background-color: #7a7b7d;
+        color: #7d4129;
+    }
+
+    #fName, #email, #message, #send{
+        border-radius: 10%;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #a25434;
+        margin-top: 40px;
+    }
+
+    #twitter{
+        height: 100px;
+        width: 100px;
+        margin: 40px;
+    }
+
+    #github{
+        height: 100px;
+        width: 100px;
+        margin: 40px;
+    }
+
+    #linkedIn{
+        height: 100px;
+        width: 100px;
+        margin: 40px;
     }
 }

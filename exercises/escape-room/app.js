@@ -10,7 +10,7 @@ function escapeRoom (selection){
     while(locked){
         selections.push(selection);
         if (selection == 1){
-            locked = false;
+            locked = false; ""
             return "You dead!";
         }else if(selection == 2){
             console.log("You found a key.");
