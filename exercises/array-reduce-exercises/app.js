@@ -83,17 +83,23 @@ var voters = [
 ];
 
 var newArr = voters.reduce(function(a, b){
-    if(b.age < 25){
+    if(b.age <= 25){
+        if(b.voted){
         a.youthVotes++;
+        }
         a.youth++;
         return a;
-    }else if(b.age < 35){
-        a.midVotes++;
+    }else if(b.age <= 35){
+        if(b.voted){
+            a.midVotes++;
+        }
          a.mids++;
         return a;
 
     }else {
-        a.oldVotes++;
+        if(b.voted){
+            a.oldVotes++;
+        }
          a.olds++;
         return a;
 
