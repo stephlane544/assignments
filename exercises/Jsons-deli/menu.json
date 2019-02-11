@@ -1,0 +1,101 @@
+{
+    "appetizers": [
+        {
+            "name": "Jalapeno Poppers",
+            "ingredients": ["Jalapenos", "breadcrumbs", "cheese", "cream cheese", "egg"],
+            "description":  "Jalapenos with cream cheese and cheese, breaded and fried."
+        },
+
+        {
+            "name": "Fried Zucchini",
+            "ingredients": ["Zucchini", "breadcrumbs", "egg"],
+            "description":  "Zucchini, sliced, breaded, and fried."
+        },
+
+        {
+            "name": "Onion Rings",
+            "ingredients": ["Onion", "breadcrumbs", "egg"],
+            "description":  "Onion, sliced, breaded, and fried."
+        }
+    ],
+
+    "cold sandwiches":[
+        {
+            "name": "Sir Lanshallot",
+            "ingredients": ["chicken", "shallots (onions)", "tomato", "american cheese", "lettuce", "white bread", "mayo", "mustard"],
+            "description":  "Chicken sandwich with onions."
+        },
+
+        {
+            "name": "Ah, Ah, Ah, Ah, Stayin' a Chive",
+            "ingredients": ["roast beef", "green onions", "tomato", "american cheese", "lettuce", "white bread", "mayo", "mustard"],
+            "description":  "Roast beef sandwich with green onions."
+        },
+
+        {
+            "name": "Olive-R Twist",
+            "ingredients": ["chicken", "shallots (onions)", "tomato", "american cheese", "lettuce", "white bread", "mayo", "mustard", "olives"],
+            "description":  "Our Sir Lanshallot sandwich with olives."
+        }
+    ],
+
+    "hot sandwiches":[
+        {
+            "name": "Fried and Prejudice",
+            "ingredients": ["chicken", "breadcrumbs", "egg", "white bun", "onion", "lettuce", "tomato", "mayo"],
+            "description":  "Crispy fried chicken burger"
+        },
+
+        {
+            "name": "New Yolk City",
+            "ingredients": ["egg", "ham", "white bread", "american cheese", "ketchup" ],
+            "description":  "Ham, egg, and cheese sandwich"
+        },
+
+        {
+            "name": "Sweet Dreams are Made of Cheese",
+            "ingredients": ["Gouda", "pepperjack", "monterey jack", "swiss", "onions", "white bread", "garlic powder", "butter"],
+            "description":  "Garlic bread grilled cheese with 4 cheeses"
+        }
+    ],
+
+    "desserts":[
+        {
+            "name": "Virgin's Breasts",
+            "ingredients": ["butter", "sugar", "egg", "lemon zest", "vanilla extract", "flour", "milk", "cornstarch", "candied orange peel", "chocolate chips", "lemon juice", "maraschino cherries"],
+            "description":  "Round pastries in the shape of a small breast, with an outer layer of pasta frolla (shortbread dough) and a cream filling flavored with chocolate and candied orange peel."
+        },
+
+        {
+            "name": "Nun's Farts",
+            "ingredients": ["pastry dough", "brown sugar", "cinnamon", "butter"],
+            "description":  "It's basically just flaky pie crust rolled up with a gooey paste of butter, brown sugar, and cinnamon."
+        },
+
+        {
+            "name": "Sex in a Pan",
+            "ingredients": ["flour", "butter", "pecans", "cream cheese", "sugar", "whipped cream", "vanilla pudding", "chocolate pudding", "milk"],
+            "description":  "This sinfully rich layered dessert has layers of cream cheese, whipped topping and two kinds of pudding on a simple baked shortbread crust."
+        }
+    ],
+
+    "drinks":[
+        {
+            "name": "Short Trip to Hell",
+            "ingredients": ["peach Schnapps", "strawberry Schnapps", "wild berry Schappps", "a can of Red Bull", "a shot of Jagermeister"],
+            "description":  "Made with  peach, strawberry, and wild berry Schappps the drink is finished with a can of Red Bull and a shot of Jagermeister."
+        },
+
+        {
+            "name": "Fearless Redneck",
+            "ingredients": ["Jim Beam Black Label Bourbon", "Sobe No Fear energy drink"],
+            "description":  "A mix of Jim Beam Black Label Bourbon and Sobe No Fear energy drink"
+        },
+
+        {
+            "name": "The Drunken Elf",
+            "ingredients": ["Bacardi Golden Rum", "pink lemonade", "a candy cane"],
+            "description":  "This mixed drink features Bacardi Golden Rum combined with pink lemonade with a candy cane to decorate the glass."
+        }
+    ]
+}
