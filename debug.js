@@ -2,7 +2,7 @@ var ask = require("readline-sync");
 //Welcome
 var userName = ask.question("What is your name? ");
 console.log("Hello " + userName + ", I'm Leslie Knope. Thank you for coming to the best city in the world, Pawnee, to help with Mission: Cheeto Bomb. President Trump plans to drop the Cheeto Bomb on Pawnee tomorrow morning. If we allow that to happen everyone in town will turn orange! Lets make our way to City Hall to stop this catastrophe!");
-
+startGame()
 var isAlive = true;
 var beatTrump = false;
 var totalSteps = 0;
@@ -21,17 +21,17 @@ var brettK = new Enemy("Brett Kavanaugh", 100, "kisses and hugs");
 //Random Enemies Function
 function getEnemy() {
     var enemies = ["jamm", "joan", "tammy", "mikeP", "brettK"];
-    var randEnemy = enemies[Math.floor(Math.random()*enemies.length)]
+    var randEnemy = enemies[Math.floor(Math.random() * enemies.length)];
     if (randEnemy === "jamm") {
-        return jamm
+        return jamm;
     } else if (randEnemy === "joan") {
-        return joan
+        return joan;
     } else if (randEnemy === "tammy") {
-        return tammy
+        return tammy;
     } else if (randEnemy === "mikeP") {
-        return mikeP
+        return mikeP;
     } else if (randEnemy === "brettK") {
-        return brettK
+        return brettK;
     }
 }
 //Create User
@@ -43,46 +43,39 @@ function User(userName, hp) {
 }
 var mainUser = new User(userName, 100);
 //Random Items Function
-function findItems() {
-    var items = ["waffles", "Sweetums 64oz. Soda", "april", "andy", "tom", "donna", "jerry"]
-    var randItem = items[Math.floor(Math.random()*items.length)]
+function findItems(mainUser) {
+    var items = ["waffles", "Sweetums 64oz. Soda", "april", "andy", "tom", "donna", "jerry"];
+    var randItem = items[Math.floor(Math.random() * items.length)]
     if (randItem === "waffles") {
         mainUser.hp = mainUser.hp + 20;
-        console.log("You found " + randItem + "! Your HP is increased by 20!")
+        console.log("You found " + randItem + "! Your HP is increased by 20!");
     } else if (randItem === "soda") {
         mainUser.hp = mainUser.hp + 10;
-        console.log("You found " + randItem + "! Your HP is increased by 10!")
+        console.log("You found " + randItem + "! Your HP is increased by 10!");
     } else if (randItem === "april") {
         mainUser.hp = mainUser.hp + 15;
-        console.log("You found " + randItem + "! Your HP is increased by 15!")
+        console.log("You found " + randItem + "! Your HP is increased by 15!");
     } else if (randItem === "andy") {
         mainUser.hp = mainUser.hp + 7;
-        console.log("You found " + randItem + "! Your HP is increased by 7!")
+        console.log("You found " + randItem + "! Your HP is increased by 7!");
     } else if (randItem === "tom") {
         mainUser.hp = mainUser.hp + 15;
-        console.log("You found " + randItem + "! Your HP is increased by 15!")
+        console.log("You found " + randItem + "! Your HP is increased by 15!");
     } else if (randItem === "donna") {
         mainUser.hp = mainUser.hp + 10;
-        console.log("You found " + randItem + "! Your HP is increased by 10!")
+        console.log("You found " + randItem + "! Your HP is increased by 10!");
     } else if (randItem === "jerry") {
         mainUser.hp = mainUser.hp + 3;
-        console.log("You found " + randItem + "! Your HP is increased by 3!")
+        console.log("You found " + randItem + "! Your HP is increased by 3!");
     }
     return mainUser.hp;
 }  
 // Play Game
 function startGame() {
-    var playGame = ask.question("Check your inventory[i] and/or walk[w] to City Hall. Any other key to quit.");
-    if (playGame === "i"){
-        checkInventory()
-    } else if (playGame === "w") {
-        walk()
-    } else {
-        return
-    }
+  walk();
 }
 //Walking Function
-function walk () {
+function walk (totalSteps) {
     var walking = choseWalking();
     while (walking) {
         var steps = Math.floor(Math.random()*10);
@@ -92,18 +85,18 @@ function walk () {
             console.log("You made it to City Hall and captured the Cheeto Bomb! You successfully defeated President Trump.");
             walking = false;
             beatTrump = true;
-            return beatTrump
+            return beatTrump;
         }
         if (steps >= 5) {
             var fightOrRun = ask.question("Do you want to fight? [f] or run? [r]");
             if (fightOrRun === "f") {
-                fight()
+                fight();
             } else {
-                run()
+                run();
             }
             walking = false;
         } else if (steps <= 4){
-            findItems()
+            findItems();
         } 
     }
 }
@@ -111,21 +104,21 @@ function walk () {
 function choseWalking () {
     var askWalk = ask.keyIn("Keep walking to City Hall [w], check inventory [i], or quit the game [q].", {limit: "wiq"});
     if (askWalk === "w") {
-        return true
+        return true;
     } else if (askWalk === "i") {
-        checkInventory()
-        return true
+        checkInventory();
+        return true;
     } else if (askWalk === "q") {
-        return false
+        return false;
     }
 }
 // console.log(keepWalking())
 // Fight Function
-function fight(randEnemy) {
+function fight(mainUser) {
     var fightEnemy = getEnemy();
-    var randWeapon = mainUser.weapon[Math.floor(Math.random()* mainUser.weapon.length)]
-    mainUser.hp -= fightEnemy.attack
-    fightEnemy.hp -= mainUser.attack
+    var randWeapon = mainUser.weapon[Math.floor(Math.random() *  mainUser.weapon.length)];
+    mainUser.hp -= fightEnemy.attack;
+    fightEnemy.hp -= mainUser.attack;
     console.log("Great job, " + userName + ". You used your " + randWeapon + " and your health is now " + mainUser.hp);
     console.log(fightEnemy.name + " even used their " + fightEnemy.weapon + " against you, and yet their health is " + fightEnemy.hp);
 }
@@ -133,16 +126,14 @@ function fight(randEnemy) {
 function run() {
     var running = Math.floor(Math.random()*10);
     if (running >= 5) {
-        enemyAttack()
+        enemyAttack();
     } else if (running <= 4) {
-        walk()
-        console.log("You have escaped from the enemy! Keep walking to city hall.")
+        walk();
+        console.log("You have escaped from the enemy! Keep walking to city hall.");
     }
 }
-function enemyAttack () {
+function enemyAttack (mainUser) {
     var enemyAttacker = getEnemy();
-    mainUser.hp -= enemyAttacker.attack
+    mainUser.hp -= enemyAttacker.attack;
     console.log (enemyAttacker.name + " attacked you with their " + enemyAttacker.weapon + ". Your HP is now " + mainUser.hp + ".");
 }
-
-startGame()
