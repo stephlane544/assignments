@@ -1,5 +1,3 @@
-var idArr = [];
-
 document.askName.addEventListener("submit", function(e){
     e.preventDefault();
     var url = "https://api.vschool.io/" + document.getElementById("name").value + "/todo";
@@ -8,7 +6,6 @@ document.askName.addEventListener("submit", function(e){
 
         objects.forEach(function(object){
             var todoTitle = document.createElement("div");
-            todoTitle.className = "todoTitle";
             var title = document.createTextNode("Title: ");
             var text = document.createTextNode(object.title);
             todoTitle.appendChild(title);
@@ -40,7 +37,6 @@ document.askName.addEventListener("submit", function(e){
             var itemId = object._id;
             var todoDiv = document.createElement("div");
             todoDiv.id = itemId;
-            console.log (itemId);
             document.getElementById("getTodos").appendChild(todoDiv);
             input.addEventListener("click", handleChecked);
 
@@ -67,7 +63,7 @@ document.askName.addEventListener("submit", function(e){
 function handleChecked(e){
     e.target.parentNode.classList.toggle("striken");
     var url = "https://api.vschool.io/" + document.getElementById("name").value + "/todo/" + e.target.parentNode.parentNode.id;
-    if(e.target.parentNode.classList === "striken"){
+    if(e.target.parentNode.classList == "striken"){
         var newObject = {
             "completed": true
         }
