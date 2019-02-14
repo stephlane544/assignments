@@ -5,9 +5,7 @@ document.askName.addEventListener("submit", function(e){
     var url = "https://api.vschool.io/" + document.getElementById("name").value + "/todo";
     axios.get(url).then(function(response){
         var objects = response.data;
-        objects.map(function(object){
-            idArr.push(object._id);
-        })
+
         objects.forEach(function(object){
             var todoTitle = document.createElement("div");
             todoTitle.className = "todoTitle";
@@ -69,26 +67,20 @@ document.askName.addEventListener("submit", function(e){
 function handleChecked(e){
     e.target.parentNode.classList.toggle("striken");
     var url = "https://api.vschool.io/" + document.getElementById("name").value + "/todo/" + e.target.parentNode.parentNode.id;
-    console.log(e.target.parentNode.parentNode.id);
     if(e.target.parentNode.classList === "striken"){
         var newObject = {
             "completed": true
         }
-        axios.put(url, newObject).then(function(response){
-            console.log(response.data);
-        }).catch(function(error){
-            console.log(error);
-        });
     }else{ 
         var newObject = {
             "completed": false
         }
-        axios.put(url, newObject).then(function(response){
-            console.log(response.data);
-        }).catch(function(error){
-            console.log(error);
-        });
     }
+    axios.put(url, newObject).then(function(response){
+        console.log(response.data);
+    }).catch(function(error){
+        console.log(error);
+    });
 }
 
 function addStrikeThrough(todoTitle, isCompleted, input){
@@ -121,7 +113,6 @@ document.postTodo.addEventListener("submit", function(e){
 function deleteObject(e){
     e.preventDefault();
     var url = "https://api.vschool.io/" + document.getElementById("name").value + "/todo/" + e.target.parentNode.id;
-    console.log(url)
     axios.delete(url).then(function(response){
     console.log(response.data);
   }).catch(function(error){
