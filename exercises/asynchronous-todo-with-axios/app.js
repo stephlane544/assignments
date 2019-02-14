@@ -32,7 +32,6 @@ document.askName.addEventListener("submit", function(e){
             var input = document.createElement("input");
             input.className = "input";
             input.type = "checkbox";
-            input.addEventListener("click", handleChecked);
 
             var button = document.createElement("button");
             button.id = "delete";
@@ -45,6 +44,8 @@ document.askName.addEventListener("submit", function(e){
             todoDiv.id = itemId;
             console.log (itemId);
             document.getElementById("getTodos").appendChild(todoDiv);
+            input.addEventListener("click", handleChecked);
+
 
 
             todoTitle.appendChild(input);
@@ -67,6 +68,27 @@ document.askName.addEventListener("submit", function(e){
 
 function handleChecked(e){
     e.target.parentNode.classList.toggle("striken");
+    var url = "https://api.vschool.io/" + document.getElementById("name").value + "/todo/" + e.target.parentNode.parentNode.id;
+    console.log(e.target.parentNode.parentNode.id);
+    if(e.target.parentNode.classList === "striken"){
+        var newObject = {
+            "completed": true
+        }
+        axios.put(url, newObject).then(function(response){
+            console.log(response.data);
+        }).catch(function(error){
+            console.log(error);
+        });
+    }else{ 
+        var newObject = {
+            "completed": false
+        }
+        axios.put(url, newObject).then(function(response){
+            console.log(response.data);
+        }).catch(function(error){
+            console.log(error);
+        });
+    }
 }
 
 function addStrikeThrough(todoTitle, isCompleted, input){
