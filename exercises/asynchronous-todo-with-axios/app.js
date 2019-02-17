@@ -94,7 +94,7 @@ document.postTodo.addEventListener("submit", function(e){
     var newTodo = {
         "title": document.getElementById("title").value,
         "description": document.getElementById("description").value,
-        "img": document.getElementById("image").value,
+        "imgUrl": document.getElementById("image").value,
         "price": document.getElementById("price").value,
         "complete": document.getElementById("complete").value
     };
