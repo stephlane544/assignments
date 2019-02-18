@@ -1,7 +1,5 @@
-a:link {
+a:link, #footer1:link {
     text-decoration: none;
-    color: #325050;
-
   }
   
   a:visited {
@@ -21,167 +19,1785 @@ a:link {
     transition: all 0.25s ease-out;
     }  
 
-  @font-face {
-    font-family: firstFont;
-    src: url(1Pt2g8TAX_SGgBGUi0tGOYEga5WOwnsXy6KHHg.woff2);
-  }
+    body{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
 
-  @font-face {
+
+    @font-face {
+    font-family: firstFont;
+    src: url(1Pt2g8TAX_SGgBGUi0tGOYEga5WOwnsXy6KHHg.woff2); 
+    }
+
+    @font-face {
     font-family: secondFont;
     src: url(kmKhZrc3Hgbbcjq75U4uslyuy4kn0qNcWxEQDO-Wyrs.woff2);
-  }
+    }
 
-  @font-face {
+    @font-face {
     font-family: thirdFont;
     src: url(kmKnZrc3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2);
-  }
+    }
 
-  @font-face {
+    @font-face {
     font-family: fourthFont;
     src: url(verdemoderna.ttf);
-  }
+    }
+
+
+    .downloadText{
+    color: #809b7e;
+    font-family: firstFont;
+    }
+
+    .arrow{
+        color: #a9b995;
+        background: #d9e1cd;
+        font-family: fourthFont;
+    }  
+
+    #footer1::after{
+ 
+        content: "5"
+    }
+
+    #footer2::after{
+
+        content: "3"
+    }
+
+    #footer3::after{
+        content: "c"
+
+    }
+
+    #footer4::after{
+        content: "a"
+
+    }
+
+    #footer5::after{
+        content: "g"
+
+    }
+
+    #footer1:hover::after{
+        color: rgba(255, 255, 255, 0.9);
+        transition: color 0.25s ease-out, box-shadow 0.25s ease-out;
+        opacity: 0.7;
+        content: "%"
+    }
+
+    #footer2:hover::after{
+        color: rgba(255, 255, 255, 0.7);
+        transition: color 0.25s ease-out, box-shadow 0.25s ease-out;
+        opacity: 0.7;
+        content: "#"
+    }
+
+    #footer3:hover::after{
+        color: rgba(255, 255, 255, 0.7);
+        transition: color 0.25s ease-out, box-shadow 0.25s ease-out;
+        opacity: 0.7;
+        content: "C"    }
+
+    #footer4:hover::after{
+        color: rgba(255, 255, 255, 0.7);
+        transition: color 0.25s ease-out, box-shadow 0.25s ease-out;
+        opacity: 0.7;
+        content: "A"    }
+
+    #footer5:hover::after{
+        color: rgba(255, 255, 255, 0.7);
+        transition: color 0.25s ease-out, box-shadow 0.25s ease-out;
+        opacity: 0.7;
+        content: "G"
+    }
+
+    #footer1:link{
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #footer2:link{
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #footer3:link{
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #footer4:link{
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #footer5:link{
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #footer1:visited{
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #footer2:visited{
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #footer3:visited{
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #footer4:visited{
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #footer5:visited{
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .leftArrow:hover{
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    .designNav:hover{
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    .rightArrow:hover{
+        background-color: rgba(255,255,255,0.2);
+    }
+
+    
 
 
 
 
-@media (max-width: 600px){
-    body{
 
+
+
+
+
+
+
+
+
+  @media (min-width: 0px) and (max-width: 500px){
+    .download{
+        display: none;
     }
 
     .container{
         display: grid;
-        grid-template-columns: 1fr;
         grid-auto-rows: max-content;
+        grid-template-columns: 100%;
+    }
+
+    .headerPic{
+        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(header.jpg);
+        background-size: 50% auto, auto, auto, cover;
+        background-position: auto, auto, auto, bottom;
+        grid-row: 1/3;
+        grid-column: 1/2;
+        border-top: solid 12px rgba(19, 67, 71, 0.8);
+    }
+
+    header{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        height: 210px;
+        display: flex;
+        flex-direction: column;
+        vertical-align: center;
+    }
+
+    #icon1{
+        margin-top: 2%;
+        margin-left: 43%;
+        height: 50px;
+        width: 50px; 
+        grid-row: 1/2;
+        grid-column: 1/2;
+        opacity: 0.6;
+    }
+
+
+    .hText{
+        margin-top: 3%;
+        margin-left: -4%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+    }
+    #part1{
+        color: white;
+        font-size: 27px;
+        font-family: firstFont;
+    }
+
+    #part2{
+        margin-top: 2%;
+        color: #fff;
+        opacity: 0.6;
+        font-size: 16px;
+        font-family: secondFont;
+    }
+
+    .navBackground{
+        width: 100%;
+        background-color: rgba(255,255,255,0.1);
+        grid-row: 2/3;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%
+    }
+
+    .leftArrow{
+        padding-top: 0.2%;
+        height: 60px;
+        width: 12%;
+        background-color: rgba(255,255,255,0.1);
+        font-size: 40px;
+        color:rgba(255, 255, 255, 0.65);
+        border: none;
+        font-family: fourthFont;
+    }
+
+    .designNav{
+        width: 88%;
+        height: 60px;
+        background-color: rgba(255,255,255,0.1);
+        padding-top: 0.2%;
+    }
+
+    #designText{
+        text-align: center;
+        color:rgba(255, 255, 255, 0.65);
+        font-size: 20px;
+        font-family: firstFont;
+        padding-top: 5%;
+    }
+
+    .rightArrow{
+        padding-right: 7%;
+        padding-top: 0.2%;
+        height: 60px;
+        width: 12%;
+        background-color: rgba(255,255,255,0.1);
+        font-size: 40px;
+        color:rgba(255, 255, 255, 0.65);
+        border: none;
+        font-family: fourthFont;
+    }
+
+    .title{
+        font-family: firstFont;
+        font-size: 1.3em;
+        margin: 2em 0 0 0;
+    }
+
+    p{
+        font-family: thirdFont;
+        font-size: 0.8em;
+        line-height: 2;
+    }
+
+    .part1{
+        grid-row: 3/4;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .part2{
+        grid-row: 8/9;
+        color: #c0cac3;
+        font-style: italic;
+        font-family: secondFont;
+        font-size: 11px;
+    }
+
+    .liOne{
+        border-top: solid 1px #d9e3dc;
+        padding-left: 9%;
+        padding-right: 13%;
+        padding-top: 8%;
+        padding-bottom: 13%;
+        cursor: pointer;
+    }
+
+
+    .designName1{
+        font-family: firstFont;
+        font-size: 16px;
+        color: #607476 !important; 
+    }
+
+    .designName{
+        font-family: firstFont;
+        font-size: 16px;
+        color: #607476 !important;;
+    }
+
+    .designerName{
+        font-family: thirdFont;
+        color: #616857 !important;
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+
+    .parallax { 
+        background-image: url("part3.png");
+        height: 100%; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(138,188,159,0.5);
+        width: 100%;
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+
+    .part3{
+        grid-row: 4/5;
+        grid-column: 1/2;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%
+    }
+
+    .parallaxTwo { 
+        background-image: url("part3.png");
+        height: 100%; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(138,188,159,0.5);
+        width: 100%;
+        /* margin-top: -1.2%; */
+        grid-row: 9/10;
+        grid-column: 1/2;
+    }
+
+    .part4{
+        grid-row: 9/10;
+        grid-column: 1/2;
+        font-size: 17px;
+        line-height: 2;
+        font-family: firstFont;
+        color: #607476;
+        /* margin-top: -2.4%; */
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        height: 100%;    
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
     
+    li:even{
+        grid-column: 2/3;
+    }
+
+    li:odd{
+        grid-column: 1/2;
+    }
+
+    .liTwo{
+        margin-top: -6%;
+        padding-left: 9%;
+        padding-right: 15%;
+        border-top: solid 1px #60747640;
+        padding-bottom: 11%;
+        cursor: pointer;
+    }
+    
+    .submitDesign{
+        margin-bottom: 5.4%;
+        border-bottom: solid 1px #60747640;
+
+    }
+  
+
+    .part5{
+        grid-row: 5/6;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+
+    .part7Pic{
+        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(footer.jpeg);
+        background-size: 50% auto, auto, auto, cover;
+        background-position: auto, auto, auto;
+        grid-row: 6/7;
+        grid-column: 1/2;
+        height: 222px;
+        margin-left: -6%;
+        /* margin-right: -2%; */
+        margin-top: 0.2%;
+    }
+
+    .part7{
+        grid-row: 6/7;
+        grid-column: 1/2;
+        color: white;
+        font-family: secondFont;
+        font-size: 23px;
+        width: 92%;
+        padding-left: 3%;
+        padding-top: 2%;
+        line-height: 2;
+        margin-bottom: -3.1%;
+    }
+    
+    .part72{
+        color: rgba(255, 255, 255, 0.4);
+        padding-top: 4%;
+        padding-bottom: 10.8%;
+        text-align: center;
+    
+    }
+
+    .part7OtherFont{
+        font-family: thirdFont;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer{
+        grid-row: 7/8;
+        background-color: #134347;
+        height: 120px;
+        margin-left: -5%;
+        /* margin-right: -2%; */
+        margin-top: -5.1%
+    }
+
+    .footerText{
+        padding-top: 4.7%;
+        font-family: fourthFont;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+}
+
+
+
+
+
+
+@media (min-width: 501px) and (max-width: 600px){
+
+    .download{
+        display: none;
+    }
+    
+    .container{
+        display: grid;
+        grid-auto-rows: max-content;
+        grid-template-columns: 100%;
+    }
+
     .headerPic{
-        background-image: url("header.jpg");
-        grid-row: 1/2;
+        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(header.jpg);
+        background-size: 50% auto, auto, auto, cover;
+        background-position: auto, auto, auto, bottom;
+        grid-row: 1/3;
+        grid-column: 1/2;
+        border-top: solid 12px rgba(19, 67, 71, 0.8);
     }
 
     header{
         grid-row: 1/2;
+        grid-column: 1/2;
+        height: 210px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
-    #part1{
+    #icon1{
+        margin-top: 5%;
+        margin-left: 18%;
+        height: 80px;
+        width: 80px;  
+        grid-row: 1/2;
+        grid-column: 1/2;
+        opacity: 0.6;
+    }
 
+    .hText{
+        margin-top: -4%;
+        margin-left: -8%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 430px;
+    }
+    #part1{
+        color: white;
+        font-size: 35px;
+        font-family: firstFont;
     }
 
     #part2{
-
+        margin-top: 2%;
+        color: #fff;
+        opacity: 0.6;
+        font-size: 18px;
+        font-family: secondFont;
     }
 
-    .head2{
+    .navBackground{
+        width: 100%;
+        background-color: rgba(255,255,255,0.1);
         grid-row: 2/3;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%
+    }
+
+    .leftArrow{
+        padding-top: 0.2%;
+        height: 60px;
+        width: 10%;
+        background-color: rgba(255,255,255,0.1);
+        font-size: 40px;
+        color:rgba(255, 255, 255, 0.65);
+        border: none;
+        font-family: fourthFont;
+    }
+
+    .designNav{
+        width: 90%;
+        height: 60px;
+        background-color: rgba(255,255,255,0.1);
+        padding-top: 0.2%;
+    }
+
+    #designText{
+        text-align: center;
+        color:rgba(255, 255, 255, 0.65);
+        font-size: 20px;
+        font-family: firstFont;
+        padding-top: 2%;
+    }
+
+    .rightArrow{
+        padding-right: 7%;
+        padding-top: 0.2%;
+        height: 60px;
+        width: 10%;
+        background-color: rgba(255,255,255,0.1);
+        font-size: 40px;
+        color:rgba(255, 255, 255, 0.65);
+        border: none;
+        font-family: fourthFont;
+    }
+
+    .title{
+        font-family: firstFont;
+        font-size: 1.3em;
+        margin: 2em 0 0 0;
+    }
+
+    p{
+        font-family: thirdFont;
+        font-size: 0.8em;
+        line-height: 2;
     }
 
     .part1{
         grid-row: 3/4;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     .part2{
-        grid-row: 10/11;
-
+        grid-row: 8/9;
+        color: #c0cac3;
+        font-style: italic;
+        font-family: secondFont;
+        font-size: 11px;
     }
 
+
+    .designName1{
+        font-family: firstFont;
+        font-size: 16px;
+        color: #607476 !important; 
+    }
+
+    .designName{
+        font-family: firstFont;
+        font-style: normal;
+        font-size: 16px;
+        color: #607476 !important;;
+    }
+
+    .designerName{
+        font-family: thirdFont;
+        color: #616857 !important;
+        font-size: 11px;
+    }
+
+
+    .parallax { 
+        background-image: url("part3.png");
+        height: 100%; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(138,188,159,0.5);
+        width: 100%;
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
 
     .part3{
         grid-row: 4/5;
+        grid-column: 1/2;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%
+    }
 
+    .parallaxTwo { 
+        background-image: url("part3.png");
+        height: 100%; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(138,188,159,0.5);
+        width: 100%;
+        grid-row: 9/10;
+        grid-column: 1/2;
     }
 
     .part4{
-        grid-row: 5/6;
+        grid-row: 9/10;
+        grid-column: 1/2;
+        font-size: 15px;
+        line-height: 2;
+        font-family: firstFont;
+        color: #607476;
+    }
+
+    ul{
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+    }
+    
+    li:even{
+        grid-column: 2/3;
+    }
+
+    li:odd{
+        grid-column: 1/2;
+    }
+
+
+    .liOne{
+        border-top: solid 1px #d9e3dc;
+        margin-top: -7%;
+        padding-left: 9%;
+        padding-right: 13%;
+        padding-top: 8%;
+        padding-bottom: 13%;
+        cursor: pointer;
+    }
+
+    .liTwo{
+        margin-top: -5%;
+        padding-left: 9%;
+        padding-right: 15%;
+        border-top: solid 1px #60747640;
+        padding-top: 8%;
+        padding-bottom: 11%;
+        cursor: pointer;
+    }
+
+    .submitDesign{
+        margin-bottom: 4.5%;
+        border-bottom: solid 1px #60747640;
 
     }
+  
 
     .part5{
-        grid-row: 6/7;
-
+        grid-row: 5/6;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
-    .part6{
-        grid-row: 7/8;
 
+    .part7Pic{
+        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(footer.jpeg);
+        background-size: 50% auto, auto, auto, cover;
+        background-position: auto, auto, auto;
+        grid-row: 6/7;
+        grid-column: 1/2;
+        height: 180px;
+        margin-top: 0.2%;
     }
 
     .part7{
-        grid-row: 8/9;
+        grid-row: 6/7;
+        grid-column: 1/2;
+        color: white;
+        font-family: secondFont;
+        font-size: 23px;
+        width: 92%;
+        padding-left: 3%;
+        padding-top: 2%;
+        line-height: 2;
+        margin-bottom: -3.1%;
+    }
+
+
+    
+    .part72{
+        color: rgba(255, 255, 255, 0.4);
+        padding-top: 4%;
+        padding-bottom: 10.8%;
+        text-align: center;
+    
+    }
+
+    .part7OtherFont{
+        font-family: thirdFont;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer{
+        grid-row: 7/8;
+        background-color: #134347;
+        height: 120px;
+
+        margin-top: -5.1%
+    }
+
+    .footerText{
+        padding-top: 4.7%;
+        font-family: fourthFont;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
 
     }
 
-    footer{
-        grid-row: 9/10;
-
-    }
 }
 
-@media (max-width: 1131px){
-    body{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (min-width: 601px) and (max-width: 643px){
+    
+    .container{
+        display: grid;
+        grid-auto-rows: max-content;
+        grid-template-columns: 1fr;
+    }
+
+    .headerPic{
+        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(header.jpg);
+        background-size: 50% auto, auto, auto, cover;
+        background-position: auto, auto, auto, bottom;
+        grid-row: 1/3;
+        grid-column: 1/2;
+        border-top: solid 12px rgba(19, 67, 71, 0.8);
+    }
+
+    header{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        height: 210px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #icon1{
+        margin-top: 5%;
+        margin-left: 18%;
+        height: 80px;
+        width: 80px;  
+        opacity: 0.6;
+    }
+
+    .hText{
+        margin-top: -4%;
+        margin-left: -8%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 450px;
+    }
+    #part1{
+        color: white;
+        font-size: 35px;
+        font-family: firstFont;
+    }
+
+    #part2{
+        margin-top: 2%;
+        color: #fff;
+        opacity: 0.6;
+        font-size: 18px;
+        font-family: secondFont;
+    }
+
+    .navBackground{
+        width: 100%;
+        background-color: rgba(255,255,255,0.1);
+        grid-row: 2/3;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%
+    }
+
+    .leftArrow{
+        padding-top: 0.2%;
+        height: 60px;
+        width: 10%;
+        background-color: rgba(255,255,255,0.1);
+        font-size: 40px;
+        color:rgba(255, 255, 255, 0.65);
+        border: none;
+        font-family: fourthFont;
+    }
+
+    .designNav{
+        width: 90%;
+        height: 60px;
+        background-color: rgba(255,255,255,0.1);
+        padding-top: 0.2%;
+    }
+
+    #designText{
+        text-align: center;
+        color:rgba(255, 255, 255, 0.65);
+        font-size: 20px;
+        font-family: firstFont;
+        padding-top: 3%;
+    }
+
+    .rightArrow{
+        padding-right: 7%;
+        padding-top: 0.2%;
+        height: 60px;
+        width: 10%;
+        background-color: rgba(255,255,255,0.1);
+        font-size: 40px;
+        color:rgba(255, 255, 255, 0.65);
+        border: none;
+        font-family: fourthFont;
+    }
+
+    .title{
+        font-family: firstFont;
+        font-size: 1.3em;
+        margin: 2em 0 0 0;
+    }
+
+    p{
+        font-family: thirdFont;
+        font-size: 0.8em;
+        line-height: 2;
+    }
+
+    .part1{
+        grid-row: 3/4;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .part2{
+        grid-row: 8/9;
+        color: #c0cac3;
+        font-style: italic;
+        font-family: secondFont;
+        font-size: 11px;
+    }
+
+
+    .designName1{
+        font-family: firstFont;
+        font-size: 16px;
+        color: #607476 !important; 
+    }
+
+    .designName{
+        font-family: firstFont;
+        font-style: normal;
+        font-size: 16px;
+        color: #607476 !important;;
+    }
+
+    .designerName{
+        font-family: thirdFont;
+        color: #616857 !important;
+        font-size: 11px;
+    }
+
+
+    .parallax { 
+        background-image: url("part3.png");
+        height: 100%; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(138,188,159,0.5);
+        width: 100%;
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+
+    .part3{
+        grid-row: 4/5;
+        grid-column: 1/2;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%
+    }
+
+    .parallaxTwo { 
+        background-image: url("part3.png");
+        height: 100%; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(138,188,159,0.5);
+        width: 100%;
+        margin-top: -1.2%;
+        grid-row: 9/10;
+        grid-column: 1/2;
+    }
+
+    .part4{
+        grid-row: 9/10;
+        grid-column: 1/2;
+        font-size: 15px;
+        line-height: 2;
+        font-family: firstFont;
+        color: #607476;
+        margin-top: -2.4%;
+    }
+
+    ul{
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
 
     }
+    
+    li:even{
+        grid-column: 2/3;
+    }
+
+    li:odd{
+        grid-column: 1/2;
+    }
+
+
+    .liOne{
+        border-top: solid 1px #d9e3dc;
+        margin-top: -7%;
+        padding-left: 9%;
+        padding-right: 13%;
+        padding-top: 8%;
+        padding-bottom: 13%;
+        cursor: pointer;
+    }
+
+    .liTwo{
+        margin-top: -2.7%;
+        padding-left: 9%;
+        padding-right: 15%;
+        border-top: solid 1px #60747640;
+        padding-top: 8%;
+        padding-bottom: 11%;
+        cursor: pointer;
+    }
+
+    .submitDesign{
+        margin-bottom: 2.7%;
+        border-bottom: solid 1px #60747640;
+
+    }
+  
+
+    .part5{
+        grid-row: 5/6;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+
+    .part7Pic{
+        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(footer.jpeg);
+        background-size: 50% auto, auto, auto, cover;
+        background-position: auto, auto, auto;
+        grid-row: 6/7;
+        grid-column: 1/2;
+        height: 180px;
+        margin-top: 1%;
+    }
+
+    .part7{
+        grid-row: 6/7;
+        grid-column: 1/2;
+        color: white;
+        font-family: secondFont;
+        font-size: 23px;
+        width: 71%;
+        padding-left: 11%;
+        padding-top: 2%;
+        line-height: 2;
+    }
+
+
+    
+    .part72{
+        color: rgba(255, 255, 255, 0.4);
+        padding-top: 4%;
+        padding-bottom: 10.8%;
+        text-align: center;
+    
+    }
+
+    .part7OtherFont{
+        font-family: thirdFont;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer{
+        grid-row: 7/8;
+        background-color: #134347;
+        height: 120px;
+        margin-top: -4.8%
+    }
+
+    .footerText{
+        padding-top: 2.3%;
+        font-family: fourthFont;
+        color:rgba(255, 255, 255, 0.5);
+        font-size: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 643px) and (max-width: 955px){
+    
+    .container{
+        display: grid;
+        grid-auto-rows: max-content;
+        grid-template-columns: 1fr;
+    }
+
+    .headerPic{
+        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(header.jpg);
+        background-size: 50% auto, auto, auto, cover;
+        background-position: auto, auto, auto, bottom;
+        grid-row: 1/3;
+        grid-column: 1/2;
+        border-top: solid 12px rgba(19, 67, 71, 0.8);
+    }
+
+    header{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        height: 210px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #icon1{
+        margin-top: 5%;
+        margin-left: 18%;
+        height: 80px;
+        width: 80px;  
+        grid-row: 1/2;
+        grid-column: 1/2;
+        opacity: 0.6;
+    }
+
+    .hText{
+        margin-top: -4%;
+        margin-left: -8%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 450px;
+    }
+    #part1{
+        color: white;
+        font-size: 35px;
+        font-family: firstFont;
+    }
+
+    #part2{
+        margin-top: 2%;
+        color: #fff;
+        opacity: 0.6;
+        font-size: 18px;
+        font-family: secondFont;
+    }
+
+    .navBackground{
+        width: 100%;
+        background-color: rgba(255,255,255,0.1);
+        grid-row: 2/3;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%
+    }
+
+    .leftArrow{
+        padding-top: 0.2%;
+        height: 64px;
+        width: 10%;
+        background-color: rgba(255,255,255,0.1);
+        font-size: 40px;
+        color:rgba(255, 255, 255, 0.65);
+        border: none;
+        font-family: fourthFont;
+    }
+
+    .designNav{
+        width: 90%;
+        height: 64px;
+        background-color: rgba(255,255,255,0.1);
+        padding-top: 0.2%;
+    }
+
+    #designText{
+        text-align: center;
+        color:rgba(255, 255, 255, 0.65);
+        font-size: 20px;
+        font-family: firstFont;
+        padding-top: 2%;
+    }
+
+    .rightArrow{
+        padding-right: 7%;
+        padding-top: 0.2%;
+        height: 64px;
+        width: 10%;
+        background-color: rgba(255,255,255,0.1);
+        font-size: 40px;
+        color:rgba(255, 255, 255, 0.65);
+        border: none;
+        font-family: fourthFont;
+    }
+
+    .title{
+        font-family: firstFont;
+        font-size: 1.3em;
+        margin: 2em 0 0 0;
+    }
+
+    p{
+        font-family: thirdFont;
+        font-size: 0.8em;
+        line-height: 2;
+    }
+
+    .part1{
+        grid-row: 3/4;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .part2{
+        grid-row: 8/9;
+        color: #c0cac3;
+        font-style: italic;
+        font-family: secondFont;
+        font-size: 11px;
+    }
+
+
+    .designName1{
+        font-family: firstFont;
+        font-size: 16px;
+        color: #607476 !important; 
+    }
+
+    .designName{
+        font-family: firstFont;
+        font-style: normal;
+        font-size: 16px;
+        color: #607476 !important;;
+    }
+
+    .designerName{
+        font-family: thirdFont;
+        color: #616857 !important;
+        font-size: 11px;
+    }
+
+
+    .parallax { 
+        background-image: url("part3.png");
+        height: 100%; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(138,188,159,0.5);
+        width: 100%;
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+
+    .part3{
+        grid-row: 4/5;
+        grid-column: 1/2;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%
+    }
+
+    .parallaxTwo { 
+        background-image: url("part3.png");
+        height: 100%; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(138,188,159,0.5);
+        width: 100%;
+        grid-row: 9/10;
+        grid-column: 1/2;
+    }
+
+    .part4{
+        grid-row: 9/10;
+        grid-column: 1/2;
+        font-size: 15px;
+        line-height: 2;
+        font-family: firstFont;
+        color: #607476;
+    }
+
+    ul{
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+    }
+    
+    li:even{
+        grid-column: 2/3;
+    }
+
+    li:odd{
+        grid-column: 1/2;
+    }
+
+
+    .liOne{
+        border-top: solid 1px #d9e3dc;
+        margin-top: -7%;
+        padding-left: 9%;
+        padding-right: 13%;
+        padding-top: 8%;
+        padding-bottom: 13%;
+        cursor: pointer;
+    }
+
+    .liTwo{
+        margin-top: -3.9%;
+        padding-left: 9%;
+        padding-right: 15%;
+        border-top: solid 1px #60747640;
+        padding-top: 8%;
+        padding-bottom: 11%;
+        cursor: pointer;
+    }
+
+    .submitDesign{
+        margin-bottom: 3.9%;
+        border-bottom: solid 1px #60747640;
+
+    }
+  
+
+    .part5{
+        grid-row: 5/6;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+
+    .part7Pic{
+        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(footer.jpeg);
+        background-size: 50% auto, auto, auto, cover;
+        background-position: auto, auto, auto;
+        grid-row: 6/7;
+        grid-column: 1/2;
+        height: 100%;
+    }
+
+    .part7{
+        grid-row: 6/7;
+        grid-column: 1/2;
+        color: white;
+        font-family: secondFont;
+        font-size: 23px;
+        width: 71%;
+        padding-left: 11%;
+        padding-top: 2%;
+        line-height: 2;
+    }
+
+
+    
+    .part72{
+        color: rgba(255, 255, 255, 0.4);
+        padding-top: 4%;
+        padding-bottom: 10.8%;
+        text-align: center;
+    
+    }
+
+    .part7OtherFont{
+        font-family: thirdFont;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer{
+        grid-row: 7/8;
+        background-color: #134347;
+        height: 120px;
+    }
+
+    .footerText{
+        padding-top: 2.3%;
+        font-family: fourthFont;
+        color:rgba(255, 255, 255, 0.5);
+        font-size: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 956px) and (max-width: 1131px){
 
     .container{
         display: grid;
-        grid-template-columns: 1fr;
         grid-auto-rows: max-content;
+        grid-template-columns: 100%;
+    }
+
+    .headerPic{
+        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(header.jpg);
+        background-size: 50% auto, auto, auto, cover;
+        background-position: auto, auto, auto, bottom;
+        grid-row: 1/3;
+        grid-column: 1/2;
+        border-top: solid 12px rgba(19, 67, 71, 0.8);
     }
 
     header{
         grid-row: 1/2;
+        grid-column: 1/2;
+        height: 210px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
-    #part1{
+    #icon1{
+        margin-top: 2%;
+        height: 80px;
+        width: 80px;  
+        grid-row: 1/2;
+        grid-column: 1/2;
+        opacity: 0.6;
+    }
 
+    .hText{
+        margin-top: 5%;
+        margin-left: -8%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 510px;
+    }
+    #part1{
+        color: white;
+        font-size: 35px;
+        font-family: firstFont;
     }
 
     #part2{
-
+        margin-top: 2%;
+        color: #fff;
+        opacity: 0.6;
+        font-size: 18px;
+        font-family: secondFont;
     }
 
-    .head2{
+    .navBackground{
+        background-color: rgba(255,255,255,0.1);
         grid-row: 2/3;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%
+    }
+
+    .leftArrow{
+        padding-top: 0.2%;
+        height: 64px;
+        width: 10%;
+        background-color: rgba(255,255,255,0.1);
+        font-size: 40px;
+        color:rgba(255, 255, 255, 0.65);
+        border: none;
+        font-family: fourthFont;
+    }
+
+    .designNav{
+        width: 90%;
+        height: 60px;
+        background-color: rgba(255,255,255,0.1);
+        padding-top: 0.2%;
+    }
+
+    #designText{
+        text-align: center;
+        color:rgba(255, 255, 255, 0.65);
+        font-size: 20px;
+        font-family: firstFont;
+        padding-top: 2%;
+    }
+
+    .rightArrow{
+        padding-top: 0.2%;
+        height: 64px;
+        width: 10%;
+        background-color: rgba(255,255,255,0.1);
+        font-size: 40px;
+        color:rgba(255, 255, 255, 0.65);
+        border: none;
+        font-family: fourthFont;
+    }
+
+    .title{
+        font-family: firstFont;
+        font-size: 1.3em;
+        margin: 2em 0 0 0;
+    }
+
+    p{
+        font-family: thirdFont;
+        font-size: 0.8em;
+        line-height: 2;
     }
 
     .part1{
         grid-row: 3/4;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     .part2{
-        grid-row: 10/11;
+        grid-row: 8/9;
+        color: #c0cac3;
+        font-style: italic;
+        font-family: secondFont;
+        font-size: 11px;
+    }
 
+
+    .designName1{
+        font-family: firstFont;
+        font-size: 16px;
+        color: #607476 !important; 
+    }
+
+    .designName{
+        font-family: firstFont;
+        font-style: normal;
+        font-size: 16px;
+        color: #607476 !important;;
+    }
+
+    .designerName{
+        font-family: thirdFont;
+        color: #616857 !important;
+        font-size: 11px;
+    }
+
+
+    .parallax { 
+        background-image: url("part3.png");
+        height: 100%; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(138,188,159,0.5);
+        width: 100%;
+        grid-row: 4/5;
+        grid-column: 1/2;
     }
 
     .part3{
         grid-row: 4/5;
+        grid-column: 1/2;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%
+    }
 
+    .parallaxTwo { 
+        background-image: url("part3.png");
+        height: 100%; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(138,188,159,0.5);
+        width: 100%;
+        margin-top: -1.2%;
+        grid-row: 9/10;
+        grid-column: 1/2;
     }
 
     .part4{
-        grid-row: 5/6;
+        grid-row: 9/10;
+        grid-column: 1/2;
+        font-size: 15px;
+        line-height: 2;
+        font-family: firstFont;
+        color: #607476;
+        margin-top: -2.4%;
+    }
+
+    ul{
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
 
     }
+    
+    li:even{
+        grid-column: 2/3;
+    }
+
+    li:odd{
+        grid-column: 1/2;
+    }
+
+
+    .liOne{
+        border-top: solid 1px #d9e3dc;
+        margin-top: -7%;
+        padding-left: 9%;
+        padding-right: 13%;
+        padding-top: 8%;
+        padding-bottom: 13%;
+        cursor: pointer;
+    }
+
+    .liTwo{
+        margin-top: -0.8%;
+        padding-left: 9%;
+        padding-right: 15%;
+        padding-top: 5%;
+        border-top: solid 1px #60747640;
+        padding-bottom: 11%;
+        cursor: pointer;
+    }
+
+    .submitDesign{
+        margin-bottom: 0.8%;
+        border-bottom: solid 1px #60747640;
+
+    }
+  
 
     .part5{
-        grid-row: 6/7;
-
+        grid-row: 5/6;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
-    .part6{
-        grid-row: 7/8;
 
+    .part7Pic{
+        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(footer.jpeg);
+        background-size: 50% auto, auto, auto, cover;
+        background-position: auto, auto, auto;
+        grid-row: 6/7;
+        grid-column: 1/2;
+        height: 100%;
     }
 
     .part7{
-        grid-row: 8/9;
-
+        grid-row: 6/7;
+        grid-column: 1/2;
+        color: white;
+        font-family: secondFont;
+        font-size: 23px;
+        width: 71%;
+        padding-left: 11%;
+        padding-top: 2%;
+        line-height: 2;
     }
 
-    footer{
-        grid-row: 9/10;
 
+    
+    .part72{
+        color: rgba(255, 255, 255, 0.4);
+        padding-top: 4%;
+        padding-bottom: 10.8%;
+        text-align: center;
+    
     }
+
+    .part7OtherFont{
+        font-family: thirdFont;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer{
+        grid-row: 7/8;
+        background-color: #134347;
+        height: 120px;
+    }
+
+    .footerText{
+        padding-top: 2.3%;
+        font-family: fourthFont;
+        color:rgba(255, 255, 255, 0.5);
+        font-size: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
 }
 
 
@@ -192,9 +1808,10 @@ a:link {
 
 
 
-@media (min-width: 1132px){
-    body{
-    }
+
+
+
+@media (min-width: 1132px) and (max-width: 1500px){
 
     .container{
         display: grid;
@@ -209,7 +1826,6 @@ a:link {
         grid-row: 1/2;
         grid-column: 1/3;
         border-top: solid 12px rgba(19, 67, 71, 0.8);
-        margin: -.6%;
     }
 
     header{
@@ -218,13 +1834,15 @@ a:link {
         height: 300px;
         display: flex;
         flex-direction: row;
+        justify-content: center;
+
     }
 
     #icon1{
-        margin-top: 5%;
-        margin-left: 8%;
-        height: 210px;
-        width: 210px;   
+        margin-top: 9%;
+        margin-left: 16%;
+        height: 130px;
+        width: 130px;   
         grid-row: 1/3;
         grid-column: 1/2;
         opacity: 0.6;
@@ -232,10 +1850,10 @@ a:link {
 
     .hText{
         margin-top: 11.5%;
-        margin-left: 2%;
+        margin-left: 4%;
         display: flex;
         flex-direction: column;
-        width: 510px;
+        width: 450px;
     }
     #part1{
         color: white;
@@ -252,22 +1870,23 @@ a:link {
     }
 
     .navBackground{
-        width: 110%;
+        width: 100%;
         background-color: #32505020;
         grid-row: 1/5;
         grid-column: 2/3;
+    }
+
+    
+    .nav{
         display: flex;
         flex-direction: row;
-        margin-bottom: -4%
-
+        margin-top: 23%;
+        justify-content: center
     }
 
     .leftArrow{
-        margin-top: 20%;
-        margin-left: 5%;
         height: 70px;
         width: 15%;
-        margin-right: .2%;
         background-color: rgba(255,255,255,0.1);
         font-size: 40px;
         color:rgba(255, 255, 255, 0.65);
@@ -276,14 +1895,12 @@ a:link {
     }
 
     .designNav{
-        margin-top: 20%;
-        width: 50%;
         height: 70px;
         background-color: rgba(255,255,255,0.1);
     }
 
     #designText{
-        margin-top: 9%;
+        padding-top: 13%;
         text-align: center;
         color:rgba(255, 255, 255, 0.65);
         font-size: 20px;
@@ -291,10 +1908,8 @@ a:link {
     }
 
     .rightArrow{
-        margin-top: 20%;
         height: 70px;
         width: 15%;
-        margin-left: .1%;
         background-color: rgba(255,255,255,0.1);
         font-size: 40px;
         color:rgba(255, 255, 255, 0.65);
@@ -328,11 +1943,22 @@ a:link {
         grid-row: 2/3;
         grid-column: 2/3;
         color: #c0cac3;
-        font-style: italic;
         font-family: secondFont;
         padding-left: 15%;
         padding-right: 10%;
         padding-top: 15%;
+    }
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+
+    }
+
+    .liOne{
+        padding-top: 4%;
+        padding-bottom: 14%;
+        cursor: pointer;
     }
 
     .designName1{
@@ -346,7 +1972,6 @@ a:link {
         font-style: normal;
         font-size: 20px;
         color: #607476 !important;;
-        padding-right: 20%;
         padding-top: 5%;
         border-top: solid 2px #d9e3dc;
     }
@@ -381,25 +2006,24 @@ a:link {
     .part4{
         grid-row: 3/4;
         grid-column: 2/3;
-        color: #325050;
-        padding-left: 10%;
-        padding-right: 10%;
+        font-size: 20px;
+        line-height: 2;
+        font-family: firstFont;
+        color: #607476;
+
     }
 
     .space{
-        margin-top: 30%;
+        margin-top: 20%;
     }
 
-    .resourceLinks{
-        font-family: firstFont;
-        font-size: 20px;
+    .liTwo{
+        border-bottom: solid 1px #a0b9ad;
         border-top: solid 1px #a0b9ad;
-        padding-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 10%;
         cursor: pointer;
-        color: #607476;
-
+        width: 60%;
+        padding: 2.5%;
+        margin-left: 18%;
     }
   
 
@@ -418,15 +2042,12 @@ a:link {
     }
 
     .part7Pic{
-        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(header.jpg);
+        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(footer.jpeg);
         background-size: 50% auto, auto, auto, cover;
         background-position: auto, auto, auto;
         grid-row: 5/6;
         grid-column: 1/3;
-        height: 350px;
-        margin-left: -6%;
-        margin-right: -6%;
-        margin-bottom: -6%;
+        height: 300px;
     }
 
     .part7{
@@ -440,11 +2061,13 @@ a:link {
 
     
     .part72{
-        padding-left: 10%;
+        padding-left: 12%;
+        padding-right: 12%;
         color: rgba(255, 255, 255, 0.4);
-        margin-top: -16%;
-        padding-bottom: 10.8%;
-    
+        margin-top: 7%;
+        text-align: center;
+        line-height: 2;
+
     }
 
     .part7OtherFont{
@@ -454,13 +2077,318 @@ a:link {
 
     }
 
-    footer{
+    .footer{
         grid-row: 6/7;
         grid-column: 1/3;
         background-color: #134347;
         height: 180px;
-        margin-left: -5%;
-        margin-right: -5%;
+
+
+    }
+
+    .footerText{
+        padding-top: 4%;
+        font-family: fourthFont;
+        color:rgba(255, 255, 255, 0.5);
+        font-size: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1501px){
+
+    .container{
+        display: grid;
+        grid-template-columns: 7fr 4fr;
+        grid-auto-rows: max-content;
+    }
+
+    .headerPic{
+        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(header.jpg);
+        background-size: 50% auto, auto, auto, cover;
+        background-position: auto, auto, auto, center;
+        grid-row: 1/2;
+        grid-column: 1/3;
+        border-top: solid 12px rgba(19, 67, 71, 0.8);
+    }
+
+    header{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    #icon1{
+        margin-top: 9%;
+        margin-left: 16%;
+        height: 130px;
+        width: 130px;   
+        grid-row: 1/3;
+        grid-column: 1/2;
+        opacity: 0.6;
+    }
+
+    .hText{
+        margin-top: 11.5%;
+        margin-left: 4%;
+        display: flex;
+        flex-direction: column;
+        width: 450px;
+    }
+    #part1{
+        color: white;
+        font-size: 50px;
+        font-family: firstFont;
+    }
+
+    #part2{
+        margin-top: 3%;
+        color: #fff;
+        opacity: 0.6;
+        font-size: 26px;
+        font-family: secondFont;
+    }
+
+    .navBackground{
+        width: 100%;
+        background-color: #32505020;
+        grid-row: 1/5;
+        grid-column: 2/3;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        margin-top: 18%;
+        justify-content: center
+    }
+
+    .leftArrow{
+        height: 70px;
+        width: 15%;
+        background-color: rgba(255,255,255,0.1);
+        font-size: 40px;
+        color:rgba(255, 255, 255, 0.65);
+        border: none;
+        font-family: fourthFont;
+    }
+
+    .designNav{
+        height: 70px;
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    #designText{
+        padding-top: 13%;
+        text-align: center;
+        color:rgba(255, 255, 255, 0.65);
+        font-size: 20px;
+        font-family: firstFont;
+    }
+
+    .rightArrow{
+        height: 70px;
+        width: 15%;
+        background-color: rgba(255,255,255,0.1);
+        font-size: 40px;
+        color:rgba(255, 255, 255, 0.65);
+        border: none;
+        font-family: fourthFont;
+    }
+
+    .title{
+        font-family: firstFont;
+        font-size: 30px;
+        margin: 2em 0 0 0;
+
+    }
+
+    p{
+        font-family: thirdFont;
+        font-size: 1em; 
+        line-height: 2;
+    }
+
+    .part1{
+        grid-row: 2/3;
+        grid-column: 1/2;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%;
+
+    }
+
+    .part2{
+        grid-row: 2/3;
+        grid-column: 2/3;
+        color: #c0cac3;
+        font-family: secondFont;
+        padding-left: 15%;
+        padding-right: 10%;
+        padding-top: 15%;
+    }
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+
+    }
+
+    .liOne{
+        padding-top: 4%;
+        padding-bottom: 14%;
+        cursor: pointer;
+    }
+
+    .designName1{
+        font-family: firstFont;
+        font-size: 20px;
+        color: #607476 !important; 
+    }
+
+    .designName{
+        font-family: firstFont;
+        font-style: normal;
+        font-size: 20px;
+        color: #607476 !important;;
+        padding-top: 5%;
+        border-top: solid 2px #d9e3dc;
+    }
+
+    .designerName{
+        font-family: thirdFont;
+        color: #616857 !important;;
+    }
+
+
+    .parallax { 
+        background-image: url("part3.png");
+        height: 100%; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(138,188,159,0.5);
+        width: 100%;
+        grid-row: 3/4;
+        grid-column: 1/3;
+    }
+
+    .part3{
+        grid-row: 3/4;
+        grid-column: 1/2;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%
+    }
+
+    .part4{
+        grid-row: 3/4;
+        grid-column: 2/3;
+        font-size: 20px;
+        line-height: 2;
+        font-family: firstFont;
+        color: #607476;
+
+    }
+
+    .space{
+        margin-top: 20%;
+    }
+
+    .liTwo{
+        border-bottom: solid 1px #a0b9ad;
+        border-top: solid 1px #a0b9ad;
+        padding-bottom: 4%;
+        cursor: pointer;
+        width: 60%;
+        padding: 2.5%;
+        margin-left: 18%;
+    }
+  
+
+    .part5{
+        grid-row: 4/5;
+        grid-column: 1/2;
+        color: #325050;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .part6{
+        grid-row: 4/5;
+        grid-column: 2/3;
+        color: #325050;
+    }
+
+    .part7Pic{
+        background-image: url(contours.png), url(noise.png), url(gridlines.png), url(footer.jpeg);
+        background-size: 50% auto, auto, auto, cover;
+        background-position: auto, auto, auto;
+        grid-row: 5/6;
+        grid-column: 1/3;
+        height: 300px;
+    }
+
+    .part7{
+        grid-row: 5/6;
+        grid-column: 1/3;
+        color: white;
+        font-family: secondFont;
+        font-size: 30px;
+    }
+
+
+    
+    .part72{
+        padding-left: 12%;
+        padding-right: 12%;
+        color: rgba(255, 255, 255, 0.4);
+        /* height: 300px; */
+        margin-top: 5%;
+        text-align: center;
+        line-height: 2;
+
+    }
+
+    .part7OtherFont{
+        font-family: thirdFont;
+        color: rgba(255, 255, 255, 0.7);
+
+
+    }
+
+    .footer{
+        grid-row: 6/7;
+        grid-column: 1/3;
+        background-color: #134347;
+        height: 180px;
+
 
     }
 

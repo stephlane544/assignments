@@ -27,6 +27,8 @@ document.askName.addEventListener("submit", function(e){
             var input = document.createElement("input");
             input.className = "input";
             input.type = "checkbox";
+            todoTitle.appendChild(input);
+            input.addEventListener("click", handleChecked);
 
             var button = document.createElement("button");
             button.id = "delete";
@@ -38,11 +40,7 @@ document.askName.addEventListener("submit", function(e){
             var todoDiv = document.createElement("div");
             todoDiv.id = itemId;
             document.getElementById("getTodos").appendChild(todoDiv);
-            input.addEventListener("click", handleChecked);
-
-
-
-            todoTitle.appendChild(input);
+            
 
             addStrikeThrough(todoTitle, object.completed, input);
 
