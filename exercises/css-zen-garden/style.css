@@ -211,7 +211,7 @@ a:link, #footer1:link {
     }
 
     #icon1{
-        margin-top: 2%;
+        margin-top: 4%;
         margin-left: 43%;
         height: 50px;
         width: 50px; 
@@ -223,12 +223,10 @@ a:link, #footer1:link {
 
     .hText{
         margin-top: 3%;
-        margin-left: -4%;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 400px;
     }
     #part1{
         color: white;
@@ -538,8 +536,7 @@ a:link, #footer1:link {
     }
 
     #icon1{
-        margin-top: 5%;
-        margin-left: 18%;
+        margin-top: 8%;
         height: 80px;
         width: 80px;  
         grid-row: 1/2;
@@ -549,12 +546,11 @@ a:link, #footer1:link {
 
     .hText{
         margin-top: -4%;
-        margin-left: -8%;
+        margin-left: 3%;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 430px;
     }
     #part1{
         color: white;
@@ -874,7 +870,6 @@ a:link, #footer1:link {
 
     #icon1{
         margin-top: 5%;
-        margin-left: 18%;
         height: 80px;
         width: 80px;  
         opacity: 0.6;
@@ -882,12 +877,11 @@ a:link, #footer1:link {
 
     .hText{
         margin-top: -4%;
-        margin-left: -8%;
+        margin-left: 4%;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 450px;
     }
     #part1{
         color: white;
@@ -1198,8 +1192,7 @@ a:link, #footer1:link {
     }
 
     #icon1{
-        margin-top: 5%;
-        margin-left: 18%;
+        margin-top: 7%;
         height: 80px;
         width: 80px;  
         grid-row: 1/2;
@@ -1208,8 +1201,7 @@ a:link, #footer1:link {
     }
 
     .hText{
-        margin-top: -4%;
-        margin-left: -8%;
+        margin-left: -4%;
         text-align: center;
         display: flex;
         flex-direction: column;

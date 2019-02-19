@@ -3,6 +3,7 @@ document.askName.addEventListener("submit", function(e){
     var url = "https://api.vschool.io/" + document.getElementById("name").value + "/todo";
     axios.get(url).then(function(response){
         var objects = response.data;
+        document.getElementById("getTodos").innerHTML = "<div class='todos'>Your to-dos: </div>";
 
         objects.forEach(function(object){
             var todoTitle = document.createElement("div");
@@ -24,32 +25,33 @@ document.askName.addEventListener("submit", function(e){
             img1.src = object.imgUrl;
             todoImg.appendChild(img1);
 
-            var input = document.createElement("input");
-            input.className = "input";
-            input.type = "checkbox";
-            todoTitle.appendChild(input);
-            input.addEventListener("click", handleChecked);
+            var check = document.createElement("div");
+            check.className = "checkMark";
+            todoTitle.appendChild(check);
+            check.addEventListener("click", handleChecked);
 
-            var button = document.createElement("button");
-            button.id = "delete";
-            var buttonText = document.createTextNode("Delete");
-            button.appendChild(buttonText);
-            button.addEventListener("click", deleteObject);
+            var deleteButton = document.createElement("img");
+            deleteButton.id = "deleteTodo";
+            deleteButton.src = "icon_delete.png";
+            deleteButton.style.width = "50px";
+            deleteButton.style.height = "50px";
+            deleteButton.addEventListener("click", deleteObject);
 
             var itemId = object._id;
             var todoDiv = document.createElement("div");
+            todoDiv.className = "todoDiv";
             todoDiv.id = itemId;
             document.getElementById("getTodos").appendChild(todoDiv);
             
 
-            addStrikeThrough(todoTitle, object.completed, input);
+            addStrikeThrough(todoTitle, object.completed, check);
 
             document.getElementById(itemId).appendChild(document.createElement("br"));
             document.getElementById(itemId).appendChild(document.createElement("br"));
             document.getElementById(itemId).appendChild(todoTitle);
             document.getElementById(itemId).appendChild(todoDescription);
             document.getElementById(itemId).appendChild(todoImg);
-            document.getElementById(itemId).appendChild(button);
+            document.getElementById(itemId).appendChild(deleteButton);
         });
     }).catch(function(error){
         console.log(error);
@@ -65,6 +67,7 @@ function handleChecked(e){
         var newObject = {
             "completed": true
         }
+        check.className.toggle = "true";
     }else{ 
         var newObject = {
             "completed": false
@@ -77,10 +80,10 @@ function handleChecked(e){
     });
 }
 
-function addStrikeThrough(todoTitle, isCompleted, input){
+function addStrikeThrough(todoTitle, isCompleted, check){
     if(isCompleted){
         todoTitle.classList.toggle("striken");
-        input.checked = true
+        check.className.toggle = "true";
     }
 };
 

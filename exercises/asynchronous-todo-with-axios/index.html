@@ -8,48 +8,78 @@
     <title>Todos</title>
 </head>
 <body>
-        <form name="askName">
-            <label for="name">Name: </label><input type="text" id="name"></input>
-            <button id="submit1">Submit</button>
+    <div class="container">
+        <div class="backgroundPic"></div>
+
+        <form class="askName" name="askName">
+            <label class="name">Welcome! Please enter your name to bring up your to-dos. 
+            <br>
+            <br>
+            If you don't have a to-do list with us, enter the name steph to see some to-dos and play with our site! </label><br>
+            <div class="inputName">
+                <input type="text" id="name"></input>
+            </div>
+            <div class="submit">
+                <button id="submit1">Submit</button>
+            </div>
         </form>
           
-        <form name="todos">
+
+
+        <form name="todos" class="todosContainer">
             <div id="getTodos">
-                <div class="todos">Your todos: </div></div>
+                <div class="todos">Your to-dos: </div>
+            </div>
         </form>
 
+
+
         <form name = "postTodo" class="postTodo"> 
-            <div id="postTodo">Create a new todo: </div>
+            <div class="createNew">
+                <div id="postTodo">Create a new todo: </div>
+            </div>
             <br>
 
             <label for="name" class="name2">Your Name: </label>
-            <input type="text" id="name2"></input>
+            <div class="input">
+                <input type="text" id="name2"></input>
+            </div>
             <br>
 
             <label>Title: </label>
-            <input type="text" id="title">
+            <div class="input">
+                <input type="text" id="title">
+            </div>
             <br>
 
             <label>Description: </label>
-            <input type="text" id="description">
+            <div class="input">
+                <input type="text" id="description">
+            </div>
             <br>
 
 
             <label>Image link: </label>
-            <input type="text" id="image">
+            <div class="input">
+                <input type="text" id="image">
+            </div>
             <br>
 
             <label>Price: </label>
-            <input type="text" id="price">
+            <div class="input">
+                <input type="number" id="price">
+            </div>
             <br>
 
-            <label>Complete: <input type="checkbox" id="complete"></label>
+            
+            <label id="postComplete">Complete: <input type="checkbox" id="complete"></label>
 
             <br>
-
-            <button id="submit2">Submit</button>
+            <div class="submit">
+                <button id="submit2">Submit</button>
+                </div>
         </form>
-
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0-beta.1/axios.js"></script>
     <script src="app.js"></script>
