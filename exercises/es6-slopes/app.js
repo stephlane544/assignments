@@ -41,14 +41,17 @@
 // console.log(returnFavorites(firstFav, secondFav, thirdFav));
 
 
-Task six
-const combineAnimals = (arr1, arr2, arr3) => [...arr1, ...arr2, ...arr3]; 
+// Task six
+// const combineAnimals = (arr1, arr2, arr3) => [...arr1, ...arr2, ...arr3]; 
 
-const realAnimals = ["dog", "cat", "mouse"];
-const magicalAnimals = ["jackolope"];
-const mysteriousAnimals = ["platypus"];
+// const realAnimals = ["dog", "cat", "mouse"];
+// const magicalAnimals = ["jackolope"];
+// const mysteriousAnimals = ["platypus"];
 
-console.log(combineAnimals(realAnimals, magicalAnimals, mysteriousAnimals)); 
+// console.log(combineAnimals(realAnimals, magicalAnimals, mysteriousAnimals)); 
+
+
+
 
 
 //Task seven
@@ -67,7 +70,7 @@ console.log(combineAnimals(realAnimals, magicalAnimals, mysteriousAnimals));
 //Task nine
 // let obj = {firstName: "Jane", lastName: "Doe"}
 
-const populatePeople = names => names.map(name => name.split(" "));
-const peopleObj = populatePeople => populatePeople.map(([firstName, lastName]) => ({firstName, lastName}));
+// const populatePeople = names => names.map(name => name.split(" "));
+// const peopleObj = populatePeople => populatePeople.map(([firstName, lastName]) => ({firstName, lastName}));
 
-console.log(peopleObj(populatePeople(["Frank Peterson", "Suzy Degual", "Liza Jones"])));
+// console.log(peopleObj(populatePeople(["Frank Peterson", "Suzy Degual", "Liza Jones"])));
