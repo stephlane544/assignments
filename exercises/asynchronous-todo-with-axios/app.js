@@ -1,33 +1,30 @@
-document.askName.addEventListener("submit", function(e){
-    e.preventDefault();
-    var url = "https://api.vschool.io/" + document.getElementById("name").value + "/todo";
+
+    var url = "https://api.vschool.io/steph/todo";
     axios.get(url).then(function(response){
         var objects = response.data;
-        document.getElementById("getTodos").innerHTML = "<div class='todos'>Your to-dos: </div>";
 
         objects.forEach(function(object){
-            var todoTitle = document.createElement("div");
-            var title = document.createTextNode("Title: ");
-            var text = document.createTextNode(object.title);
-            todoTitle.appendChild(title);
-            todoTitle.appendChild(text);
+            var todo = document.createElement("div");
+            todo.id = "todo";
+            var todoTitle = document.createElement("input");
+            todoTitle.id = "todoTitle";
+            todoTitle.value = object.title;
 
-            var todoDescription = document.createElement("div");
+
+            var todoDescription = document.createElement("textarea");
+            todoDescription.rows = "2";
             todoDescription.className = "todoDescription";
-            var description = document.createTextNode("Description: ");
-            var text2 = document.createTextNode(object.description);
-            todoDescription.appendChild(description);
-            todoDescription.appendChild(text2);
+            todoDescription.value = object.description;
+            // var textArea = document.createElement("textArea");
+            
 
-            var todoImg = document.createElement("div");
-            todoImg.className = "todoImg";
-            var img1 = document.createElement("img");
-            img1.src = object.imgUrl;
-            todoImg.appendChild(img1);
 
-            var check = document.createElement("div");
+            var imgContainer = document.createElement("div");
+            imgContainer.id = "imgContainer";
+            var check = document.createElement("span");
+            var mark = document.createTextNode("✓");
+            check.appendChild(mark);
             check.className = "checkMark";
-            todoTitle.appendChild(check);
             check.addEventListener("click", handleChecked);
 
             var deleteButton = document.createElement("img");
@@ -37,37 +34,56 @@ document.askName.addEventListener("submit", function(e){
             deleteButton.style.height = "50px";
             deleteButton.addEventListener("click", deleteObject);
 
+            var saveButton = document.createElement("img");
+            saveButton.src = "Asset 5.png";
+            saveButton.id = "saveTodo";
+            saveButton.style.width = "50px";
+            saveButton.style.height = "50px";
+            saveButton.addEventListener("click", saveObject);
+
             var itemId = object._id;
             var todoDiv = document.createElement("div");
             todoDiv.className = "todoDiv";
             todoDiv.id = itemId;
             document.getElementById("getTodos").appendChild(todoDiv);
+
             
 
             addStrikeThrough(todoTitle, object.completed, check);
 
-            document.getElementById(itemId).appendChild(document.createElement("br"));
-            document.getElementById(itemId).appendChild(document.createElement("br"));
             document.getElementById(itemId).appendChild(todoTitle);
+            document.getElementById(itemId).appendChild(imgContainer);
+            imgContainer.appendChild(check);
+            imgContainer.appendChild(deleteButton);
+            imgContainer.appendChild(saveButton);
             document.getElementById(itemId).appendChild(todoDescription);
-            document.getElementById(itemId).appendChild(todoImg);
-            document.getElementById(itemId).appendChild(deleteButton);
+
+
+            if(object.imgUrl.length > 0){
+                var todoImg = document.createElement("div");
+                todoImg.className = "todoImg";
+                var img1 = document.createElement("img");
+                img1.id = "imgStyle";
+                img1.src = object.imgUrl;
+                todoImg.appendChild(img1);
+                document.getElementById(itemId).appendChild(todoImg);
+    
+                }
         });
     }).catch(function(error){
         console.log(error);
     });
-    console.log(idArr);
-    return url;
-});
+
 
 function handleChecked(e){
-    e.target.parentNode.classList.toggle("striken");
-    var url = "https://api.vschool.io/" + document.getElementById("name").value + "/todo/" + e.target.parentNode.parentNode.id;
-    if(e.target.parentNode.classList == "striken"){
+    e.target.parentNode.parentNode.childNodes[0].classList.toggle("striken");
+    var url = "https://api.vschool.io/steph/todo/" + e.target.parentNode.parentNode.id;
+    console.log(e.target.parentNode.parentNode.childNodes[0]);
+    if(e.target.parentNode.parentNode.childNodes[0].classList == "striken"){
         var newObject = {
             "completed": true
         }
-        check.className.toggle = "true";
+
     }else{ 
         var newObject = {
             "completed": false
@@ -91,7 +107,7 @@ function addStrikeThrough(todoTitle, isCompleted, check){
 
 document.postTodo.addEventListener("submit", function(e){
     e.preventDefault();
-    var url = "https://api.vschool.io/" + document.getElementById("name2").value + "/todo";
+    var url = "https://api.vschool.io/steph/todo";
     var newTodo = {
         "title": document.getElementById("title").value,
         "description": document.getElementById("description").value,
@@ -101,19 +117,80 @@ document.postTodo.addEventListener("submit", function(e){
     };
     axios.post(url, newTodo).then(function(response){
     console.log(response.data);
+    alert("You have added this todo. Please re-enter your name to bring up the todos again.");
+    location.reload();
   }).catch(function(error){
     console.log(error);
   });
+
 });
 
 
 function deleteObject(e){
     e.preventDefault();
-    var url = "https://api.vschool.io/" + document.getElementById("name").value + "/todo/" + e.target.parentNode.id;
+    var url = "https://api.vschool.io/steph/todo/" + e.target.parentNode.parentNode.id;
     axios.delete(url).then(function(response){
     console.log(response.data);
+    alert("The to-do item you selected has been deleted. Please re-enter your name to bring up the todos again.");
+      location.reload();
   }).catch(function(error){
     console.log(error);
   });
 };
 
+
+
+document.getElementById("openButton").addEventListener("click", openForm);
+let openCounter = 0;
+function openForm() {
+    openCounter++;
+    if(openCounter % 2 == 1){
+    document.getElementsByClassName("postTodo")[0].classList = "visible";
+    }else{
+        document.getElementsByClassName("visible")[0].classList = "postTodo";
+    }
+}
+
+
+function saveObject(e){
+    e.preventDefault();
+    var url = "https://api.vschool.io/steph/todo/" + e.target.parentNode.parentNode.id;
+    let newObject = {};
+    if(e.target.parentNode.parentNode.childNodes[0].classList == "striken"){
+        if(e.target.parentNode.parentNode.childNodes[3].childNodes[0].src.length > 0){
+            newObject = {
+                "title": e.target.parentNode.parentNode.childNodes[0].value,
+                "description": e.target.parentNode.parentNode.childNodes[2].value,
+                "imgUrl": e.target.parentNode.parentNode.childNodes[3].childNodes[0].src,
+                "complete": true
+            };
+        }else{
+            newObject = {
+                "title": e.target.parentNode.parentNode.childNodes[0].value,
+                "description": e.target.parentNode.parentNode.childNodes[2].value,
+                "complete": true
+            };
+        }
+    }else{
+        if(e.target.parentNode.parentNode.childNodes[3].childNodes[0].src.length > 0){
+            newObject = {
+                "title": e.target.parentNode.parentNode.childNodes[0].value,
+                "description": e.target.parentNode.parentNode.childNodes[2].value,
+                "imgUrl": e.target.parentNode.parentNode.childNodes[3].childNodes[0].src,
+                "complete": false
+            };
+        }else{
+            newObject = {
+                "title": e.target.parentNode.parentNode.childNodes[0].value,
+                "description": e.target.parentNode.parentNode.childNodes[2].value,
+                "complete": false
+            };
+        }
+    }
+    axios.put(url, newObject).then(function(response){
+        console.log(response.data);
+        location.reload();
+    }).catch(function(error){
+        console.log(error);
+    });
+}

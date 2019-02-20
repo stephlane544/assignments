@@ -11,74 +11,58 @@
     <div class="container">
         <div class="backgroundPic"></div>
 
-        <form class="askName" name="askName">
-            <label class="name">Welcome! Please enter your name to bring up your to-dos. 
-            <br>
-            <br>
-            If you don't have a to-do list with us, enter the name steph to see some to-dos and play with our site! </label><br>
-            <div class="inputName">
-                <input type="text" id="name"></input>
-            </div>
-            <div class="submit">
-                <button id="submit1">Submit</button>
-            </div>
-        </form>
-          
-
-
         <form name="todos" class="todosContainer">
             <div id="getTodos">
-                <div class="todos">Your to-dos: </div>
+                <div class="todos">Welcome! Here are your to-dos: </div>
             </div>
         </form>
 
 
-
-        <form name = "postTodo" class="postTodo"> 
-            <div class="createNew">
-                <div id="postTodo">Create a new todo: </div>
-            </div>
-            <br>
-
-            <label for="name" class="name2">Your Name: </label>
-            <div class="input">
-                <input type="text" id="name2"></input>
-            </div>
-            <br>
-
-            <label>Title: </label>
-            <div class="input">
-                <input type="text" id="title">
-            </div>
-            <br>
-
-            <label>Description: </label>
-            <div class="input">
-                <input type="text" id="description">
-            </div>
-            <br>
-
-
-            <label>Image link: </label>
-            <div class="input">
-                <input type="text" id="image">
-            </div>
-            <br>
-
-            <label>Price: </label>
-            <div class="input">
-                <input type="number" id="price">
-            </div>
-            <br>
-
-            
-            <label id="postComplete">Complete: <input type="checkbox" id="complete"></label>
-
-            <br>
-            <div class="submit">
-                <button id="submit2">Submit</button>
+        <div class="addTodo">
+            <div id="openButton" class="openButton">Create a new todo:</div>
+                
+            <form name = "postTodo" class="postTodo"> 
+                <br>
+                <label for="name" class="name2">Your Name: </label>
+                <div class="input">
+                    <input type="text" id="name2" placeholder="Name" required></input>
                 </div>
-        </form>
+                <br>
+
+                <label>Title: </label>
+                <div class="input">
+                    <input type="text" id="title" placeholder="Title" required>
+                </div>
+                <br>
+
+                <label>Description: </label>
+                <div class="input">
+                    <input type="text" id="description" placeholder="Description" required>
+                </div>
+                <br>
+
+
+                <label>Image link: </label>
+                <div class="input">
+                    <input type="text" id="image" placeholder="Image Link">
+                </div>
+                <br>
+
+                <label>Price: </label>
+                <div class="input">
+                    <input type="number" id="price"  placeholder="Price">
+                </div>
+                <br>
+
+                
+                <label id="postComplete">Complete: <input type="checkbox" id="complete"></label>
+
+                <br>
+                <div class="submit">
+                    <button id="submit2">Submit</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0-beta.1/axios.js"></script>

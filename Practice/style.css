@@ -1,0 +1,7 @@
+span {
+    content: "✓";
+    font-weight: 700;
+    font-size: 84px;
+    font-size: 5.25rem;
+    color: black
+  }

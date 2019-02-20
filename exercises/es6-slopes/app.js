@@ -41,14 +41,14 @@
 // console.log(returnFavorites(firstFav, secondFav, thirdFav));
 
 
-//Task six
-// const combineAnimals = (arr1, arr2, arr3) => [...arr1, ...arr2, ...arr3]; 
+Task six
+const combineAnimals = (arr1, arr2, arr3) => [...arr1, ...arr2, ...arr3]; 
 
-// const realAnimals = ["dog", "cat", "mouse"];
-// const magicalAnimals = ["jackolope"];
-// const mysteriousAnimals = ["platypus"];
+const realAnimals = ["dog", "cat", "mouse"];
+const magicalAnimals = ["jackolope"];
+const mysteriousAnimals = ["platypus"];
 
-// console.log(combineAnimals(realAnimals, magicalAnimals, mysteriousAnimals)); 
+console.log(combineAnimals(realAnimals, magicalAnimals, mysteriousAnimals)); 
 
 
 //Task seven
