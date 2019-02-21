@@ -12,6 +12,7 @@ const App = () => {
             <Products />
             <Footer />
         </div>
+        <img src="" alt=""/>
     )
 }
 
