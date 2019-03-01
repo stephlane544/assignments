@@ -1,0 +1,5 @@
+.box1, .box2, .box3, .box4{
+    height: 150px;
+    width: 150px;
+    background-color: this.state.backgroundColor
+}

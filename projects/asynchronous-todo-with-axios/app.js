@@ -79,15 +79,8 @@ function handleChecked(e){
     e.target.parentNode.parentNode.childNodes[0].classList.toggle("striken");
     var url = "https://api.vschool.io/steph/todo/" + e.target.parentNode.parentNode.id;
     console.log(e.target.parentNode.parentNode.childNodes[0]);
-    if(e.target.parentNode.parentNode.childNodes[0].classList == "striken"){
-        var newObject = {
-            "completed": true
-        }
-
-    }else{ 
-        var newObject = {
-            "completed": false
-        }
+    var newObject = {
+        "completed": e.target.parentNode.parentNode.childNodes[0].classList == "striken"
     }
     axios.put(url, newObject).then(function(response){
         console.log(response.data);
@@ -117,7 +110,7 @@ document.postTodo.addEventListener("submit", function(e){
     };
     axios.post(url, newTodo).then(function(response){
     console.log(response.data);
-    alert("You have added this todo. Please re-enter your name to bring up the todos again.");
+    alert("You have added this todo!");
     location.reload();
   }).catch(function(error){
     console.log(error);
@@ -131,7 +124,7 @@ function deleteObject(e){
     var url = "https://api.vschool.io/steph/todo/" + e.target.parentNode.parentNode.id;
     axios.delete(url).then(function(response){
     console.log(response.data);
-    alert("The to-do item you selected has been deleted. Please re-enter your name to bring up the todos again.");
+    alert("The to-do item you selected has been deleted!");
       location.reload();
   }).catch(function(error){
     console.log(error);
@@ -155,39 +148,12 @@ function openForm() {
 function saveObject(e){
     e.preventDefault();
     var url = "https://api.vschool.io/steph/todo/" + e.target.parentNode.parentNode.id;
-    let newObject = {};
-    if(e.target.parentNode.parentNode.childNodes[0].classList == "striken"){
-        if(e.target.parentNode.parentNode.childNodes[3].childNodes[0].src.length > 0){
-            newObject = {
-                "title": e.target.parentNode.parentNode.childNodes[0].value,
-                "description": e.target.parentNode.parentNode.childNodes[2].value,
-                "imgUrl": e.target.parentNode.parentNode.childNodes[3].childNodes[0].src,
-                "complete": true
-            };
-        }else{
-            newObject = {
-                "title": e.target.parentNode.parentNode.childNodes[0].value,
-                "description": e.target.parentNode.parentNode.childNodes[2].value,
-                "complete": true
-            };
-        }
-    }else{
-        if(e.target.parentNode.parentNode.childNodes[3].childNodes[0].src.length > 0){
-            newObject = {
-                "title": e.target.parentNode.parentNode.childNodes[0].value,
-                "description": e.target.parentNode.parentNode.childNodes[2].value,
-                "imgUrl": e.target.parentNode.parentNode.childNodes[3].childNodes[0].src,
-                "complete": false
-            };
-        }else{
-            newObject = {
-                "title": e.target.parentNode.parentNode.childNodes[0].value,
-                "description": e.target.parentNode.parentNode.childNodes[2].value,
-                "complete": false
-            };
-        }
-    }
-    axios.put(url, newObject).then(function(response){
+    let editedObject = {
+        "title": e.target.parentNode.parentNode.childNodes[0].value,
+        "description": e.target.parentNode.parentNode.childNodes[2].value,
+        "complete": e.target.parentNode.parentNode.childNodes[0].classList == "striken"
+    };
+    axios.put(url, editedObject).then(function(response){
         console.log(response.data);
         location.reload();
     }).catch(function(error){
