@@ -25,13 +25,16 @@ class QuestionsProvider extends Component {
         }))
     }
 
+    wrongAnswer = () => { 
+        this.setState(prevState => ({
+            numberCorrect: prevState.numberCorrect
+        }))
+    }
+
     getPrettyData = (question) => {
         let apostrophe = question.question.replace(/&#039;/g, '\'').replace(/&quot;/g, '\'').replace(/&ldquo;/g, '\'').replace(/&rdquo;/g, '\'')
-        // let actualQuestion = apostrophe.replace(/&quot;/g, '\'')
-        // let actualQuestion = apostrophe.replace(/&ldquo;/g, '\'')
-        // let actualQuestion = apostrophe.replace(/&rdquo;/g, '\'')
-        let answers = [question.correct_answer]
-        question.incorrect_answers.map(answer => answers.push(answer))
+        let answers = [question.correct_answer.replace(/&#039;/g, '\'').replace(/&quot;/g, '\'').replace(/&ldquo;/g, '\'').replace(/&rdquo;/g, '\'')]
+        question.incorrect_answers.map(answer => answers.push(answer.replace(/&#039;/g, '\'').replace(/&quot;/g, '\'').replace(/&ldquo;/g, '\'').replace(/&rdquo;/g, '\'')))
         let object = [
             apostrophe,
             answers
@@ -45,6 +48,7 @@ class QuestionsProvider extends Component {
                 getPrettyData: this.getPrettyData,
                 getQuestions: this.getQuestions,
                 incrementScore: this.incrementScore,
+                wrongAnswer: this.wrongAnswer,
                 ...this.state
             }}>
                 {this.props.children}

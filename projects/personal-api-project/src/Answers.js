@@ -25,9 +25,8 @@ class Answers extends Component {
         console.log(answer === this.props.answers[0])
         if(answer === this.props.answers[0]){
             this.props.incrementScore()
-            return  <Questions />
         }else{
-            return  <Questions />
+            this.props.wrongAnswer()
         }
     }
 

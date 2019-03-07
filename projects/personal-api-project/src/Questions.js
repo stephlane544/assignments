@@ -6,7 +6,6 @@ import Answers from './Answers'
 class Questions extends Component {
     answers = () => {
         if(this.props.randQuestion){
-            // const randAnsNum = Math.floor(Math.random() * this.props.randQuestion[1].length) + 1
             return(
             <Answers answers={this.props.randQuestion[1]} />
             )
