@@ -1,22 +1,27 @@
 import React from 'react';
 
 const DisplayAll = (props) => {
-    console.log(props.array)
-    const mappedAnswers = props.array[1].map(answer => <span>{answer}  </span>)
+    // console.log(props)
+    // console.log(props.question[1])
+    const mappedAnswers = props.question[1].map((answer, i) => <><div key={i}>{answer}  </div><br/></>)
     return (
-        <div style={{display:'grid', gridTemplateColumns:'2fr 1fr 1fr', paddingBottom:'20px'}}>
-            <div>
+        <div className="displayAll">
+            <br/>
+            <div className="displayTitles">
+                <div>Category:</div>
                 <div>Question: </div> 
-                <div>{props.array[0]}</div>
-            </div>
-            <div>
                 <div>Possible Answers: </div>
-                <div>{mappedAnswers}</div>
-            </div>
-            <div>
                 <div>Correct Answer: </div>
-                <div>{props.array[1][0]}</div>
             </div>
+
+            <div className="categories">
+                <div>{props.question[2]}</div>
+                <div>{props.question[0]}</div>
+                <div>{mappedAnswers}</div>
+                <div>{props.question[1][0]}</div>
+            </div>
+            <br/>
+
         </div>
     );
 };

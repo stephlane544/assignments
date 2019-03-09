@@ -3,10 +3,7 @@ import Questions from './Questions';
 import {withProvider} from './QuestionsProvider';
 
 class Game extends React.Component {
-    constructor(props){
-        super (props)
-        
-    }
+
     componentDidMount(){
         this.props.getQuestions()
         
@@ -21,11 +18,12 @@ class Game extends React.Component {
     }  
     render(){
         return(
-            <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-                <div>
+            <div className="game">
+                <div></div>
+                <div className="Question">
                     {this.displayQuestion()}
                 </div>
-                <div>
+                <div className="score">
                     Your Score: {this.props.numberCorrect}
                 </div>
             </div>

@@ -12,17 +12,14 @@ class Questions extends Component {
         }else{return(null)}
     }
     render() {
-       
-
         return (
-            <>
+            <div className="questions">
                 <div>{this.props.randQuestion ? this.props.randQuestion[0] : null}</div>
-                <div>
-                    <div>{this.answers()}</div>
+                <>
+                    {this.answers()}
+                </>
 
-                </div>
-
-            </>
+            </div>
         );
     }
 }

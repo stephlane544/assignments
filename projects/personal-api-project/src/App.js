@@ -4,12 +4,13 @@ import { Switch, Route } from 'react-router-dom';
 import Navbar from './Navbar'
 import About from './About'
 import Browse from './Browse'
+import './App.css'
 
 
 class App extends Component {
   render() {
     return (
-      <div >
+      <div>
         <Navbar />
         <Switch>
           <Route exact path='/' component={Game}/>

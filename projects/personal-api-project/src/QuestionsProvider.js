@@ -32,14 +32,17 @@ class QuestionsProvider extends Component {
     }
 
     getPrettyData = (question) => {
-        let apostrophe = question.question.replace(/&#039;/g, '\'').replace(/&quot;/g, '\'').replace(/&ldquo;/g, '\'').replace(/&rdquo;/g, '\'')
-        let answers = [question.correct_answer.replace(/&#039;/g, '\'').replace(/&quot;/g, '\'').replace(/&ldquo;/g, '\'').replace(/&rdquo;/g, '\'')]
+        let apostrophe = question.question.replace(/&#039;/g, '\'').replace(/&quot;/g, '\'').replace(/&ldquo;/g, '\'').replace(/&rdquo;/g, '\'').replace(/&eacute;/g, 'e').replace(/&rsquo;/g, '\'').replace(/&amp;/g, '&').replace(/&deg;/g, '°').replace(/&Delta;/g, '∆').replace(/&Uuml;/g, 'Ü')
+        let answers = [question.correct_answer.replace(/&#039;/g, '\'').replace(/&quot;/g, '\'').replace(/&ldquo;/g, '\'').replace(/&rdquo;/g, '\'').replace(/&uuml;/g, 'u').replace(/&hellip;/g, ':').replace(/&Uuml;/g, 'Ü').replace(/&Amp;/g, '&').replace(/&amp;/g, '&')]
+
         question.incorrect_answers.map(answer => answers.push(answer.replace(/&#039;/g, '\'').replace(/&quot;/g, '\'').replace(/&ldquo;/g, '\'').replace(/&rdquo;/g, '\'')))
         let object = [
             apostrophe,
-            answers
+            answers,
+            question.category,
+            question.type,
+            question.difficulty
         ]
-    
         return object
     }
     render() {
