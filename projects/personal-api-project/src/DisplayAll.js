@@ -3,7 +3,7 @@ import React from 'react';
 const DisplayAll = (props) => {
     // console.log(props)
     // console.log(props.question[1])
-    const mappedAnswers = props.question[1].map((answer, i) => <><div key={i}>{answer}  </div><br/></>)
+    const mappedAnswers = props.question[1].map((answer, i) => <><div key={i+i}>{answer}  </div><br/></>)
     return (
         <div className="displayAll">
             <br/>

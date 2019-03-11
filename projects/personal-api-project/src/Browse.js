@@ -21,7 +21,6 @@ class Browse extends React.Component{
     }
 
     setClickedValue = (value) => {
-        console.log('fired')
         value = value.toUpperCase()
         const matchedQuestions = []
         const filteredQuestions = this.props.qAndA.filter(question => {
@@ -45,8 +44,7 @@ class Browse extends React.Component{
                 }
             return matchedQuestions
         })
-        console.log(this.state.matched)
-        if(matchedQuestions.length < 0){
+        if(matchedQuestions.length > 0){
             this.setState({matchedQuestions: matchedQuestions, matched: true, searched: true})
         }else{
             this.setState({matched: false, searched: true})
@@ -106,7 +104,7 @@ class Browse extends React.Component{
                 <div>
                     {this.state.searched ? 
                         (this.state.matched ? 
-                            this.state.matchedQuestions.map((question, i) => <DisplayAll key={i} question={question}/>)
+                            this.state.matchedQuestions.map((question, i) => <DisplayAll key={i+i} question={question}/>)
                         :
                             <div className="sorry">Sorry, no questions match your search at this time!!!</div>
                         )
