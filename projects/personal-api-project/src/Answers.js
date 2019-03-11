@@ -53,11 +53,11 @@ class Answers extends Component {
         this.setState({
             clickEnabled: true
         })
-        if(this.state.answer === this.props.answers[0]){
-            this.props.incrementScore()
-        }else{
-            this.props.wrongAnswer()
-        }
+        // if(this.state.answer === this.props.answers[0]){
+        //     this.props.incrementScore()
+        // }else{
+        //     this.props.wrongAnswer()
+        // }
     }
 
     render() {

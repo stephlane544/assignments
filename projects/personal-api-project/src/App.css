@@ -265,6 +265,7 @@ body{
 #linkedIn{
     height: 50px;
     width: 50px;
+    padding-right: 10%;
 }
 
 
@@ -819,5 +820,53 @@ body{
 
     .rightContact{
         font-size: 20px;
+    }
+}
+
+
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .searchButton{
+        margin-left: 7%;
+    }
+}
+
+
+
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .searchButton{
+        margin-left: 4%;
+    }
+}
+
+
+
+
+@media (min-width: 1401px) and (max-width: 1600px) {
+    .searchButton{
+        margin-left: 2%;
+    }
+}
+
+
+
+
+
+
+@media (min-width: 1601px) and (max-width: 1800px) {
+    .searchButton{
+        margin-left: 0%;
+    }
+}
+
+
+
+
+
+
+@media (min-width: 1801px){
+    .searchButton{
+        margin-left: -1%;
     }
 }
