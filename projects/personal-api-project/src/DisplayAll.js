@@ -21,6 +21,7 @@ const DisplayAll = (props) => {
                 <div>{props.question[1][0]}</div>
             </div>
             <br/>
+            <div className='questionBorders'></div>
 
         </div>
     );

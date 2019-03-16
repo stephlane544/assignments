@@ -217,6 +217,19 @@ body{
     padding-left: 10%;
 }
 
+.sorry{
+    margin-top: 5%;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Walter Turncoat', cursive;
+}
+
+.questionBorders{
+    height: 5px;
+    width: 100%;
+    background-color: #1b1b1c;
+}
+
 .contact{
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -18,7 +18,6 @@ class Questions extends Component {
                 <>
                     {this.answers()}
                 </>
-
             </div>
         );
     }

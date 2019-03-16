@@ -1,0 +1,38 @@
+
+.navbar{
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr 1fr;
+  grid-template-rows: 100px;
+  background-color: #10b5a6;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-top: -10px;
+}
+
+.links{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-family: 'Aclonica';
+  font-size: 150%;
+}
+
+#name{
+  padding-left: 10%;
+  font-family: 'Aclonica';
+  font-size: 250%;
+}
+
+#about{
+
+}
+
+#projects{
+
+}
+
+#contact{
+
+}

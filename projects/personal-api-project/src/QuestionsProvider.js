@@ -32,12 +32,20 @@ class QuestionsProvider extends Component {
     }
 
     getPrettyData = (question) => {
-        let apostrophe = question.question.replace(/&#039;/g, '\'').replace(/&quot;/g, '\'').replace(/&ldquo;/g, '\'').replace(/&rdquo;/g, '\'').replace(/&eacute;/g, 'e').replace(/&iacute;/g, 'i').replace(/&rsquo;/g, '\'').replace(/&amp;/g, '&').replace(/&Amp;/g, '&').replace(/&deg;/g, '°').replace(/&Delta;/g, '∆').replace(/&Uuml;/g, 'Ü')
-        let answers = [question.correct_answer.replace(/&#039;/g, '\'').replace(/&quot;/g, '\'').replace(/&ldquo;/g, '\'').replace(/&rdquo;/g, '\'').replace(/&uuml;/g, 'u').replace(/&hellip;/g, ':').replace(/&Uuml;/g, 'Ü').replace(/&Amp;/g, '&').replace(/&amp;/g, '&')]
+        const parser = new DOMParser();
+        let parsedQuestion = parser.parseFromString(`<!doctype html><body>${question.question}`, 'text/html')
+        let parsedCorrect = parser.parseFromString(`<!doctype html><body>${question.correct_answer}`, 'text/html')
+        
+        let prettyQuestion = parsedQuestion.body.textContent
+        let answers = [parsedCorrect.body.textContent]
 
-        question.incorrect_answers.map(answer => answers.push(answer.replace(/&#039;/g, '\'').replace(/&quot;/g, '\'').replace(/&ldquo;/g, '\'').replace(/&rdquo;/g, '\'').replace(/&uuml;/g, 'u').replace(/&hellip;/g, ':').replace(/&Uuml;/g, 'Ü').replace(/&Amp;/g, '&').replace(/&amp;/g, '&')))
+        question.incorrect_answers.map(answer => {
+            let parsedAnswer = parser.parseFromString(`<!doctype html><body>${answer}`, 'text/html')
+            return answers.push(parsedAnswer.body.textContent)
+        })
+
         let object = [
-            apostrophe,
+            prettyQuestion,
             answers,
             question.category,
             question.type,
