@@ -36,3 +36,61 @@
 #contact{
 
 }
+
+.projectGrid{
+  background-color: #909090;
+  min-height: 100%;
+  margin-right: -10px;
+  padding-top: 8%;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-auto-rows: auto;
+  grid-row-gap: 20%;
+}
+
+.triviaGame{
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20%
+}
+
+
+.todos{
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20%
+}
+
+.zenGarden{
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20%
+}
+
+img{
+  width: 130%
+}
+
+.title{
+  font-size: 30px;
+}
+
+.projectInfo{
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.builtWith{
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between */
+}
+
+.boldBuilt{
+  font-weight: 900;
+}
