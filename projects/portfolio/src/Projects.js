@@ -2,6 +2,8 @@ import React from 'react';
 import Todos from './project thumbnails/To-dos.png';
 import ZenGarden from './project thumbnails/CSS Zen Garden.png';
 import TriviaGame from './project thumbnails/Trivia Game.png';
+import styles from './Styles/Projects.css'
+
 
 const Projects = () => {
     return (

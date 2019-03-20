@@ -1,0 +1,19 @@
+.about{
+    height: 90vh;
+}
+
+.aboutGrid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+}
+
+.headshot{
+    padding-top: 20%;
+    grid-column: 2/3;
+    width: 50%;
+}
+
+.aboutDescription{
+    padding-top: 35%;
+    line-height: 2;
+}
