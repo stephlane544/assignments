@@ -1,6 +1,6 @@
 import React from 'react';
 import headshot from './headshot.jpg'
-import styles from './Styles/About.css'
+import './Styles/About.css'
 
 const About = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Styles/Contact.css'
+import './Styles/Contact.css'
 
 
 class Contact extends React.Component{
@@ -20,9 +20,9 @@ class Contact extends React.Component{
             <div className='contact'>
                 <div>520-286-0841</div>
                 <div>stephlane544@gmail.com</div>
-                <img onClick={this.twitter} id="twitter" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png" alt=""/>
-                <img onClick={this.github} id="github" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt=""/>
-                <img onClick={this.linkedIn} id="linkedIn" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png" alt=""/>
+                <img onClick={this.twitter} id="twitter" src="https://img.icons8.com/ios/50/000000/twitter-filled.png" alt=""/>
+                <img onClick={this.github} id="github" src="https://img.icons8.com/ios/50/000000/github-filled.png" alt=""/>
+                <img onClick={this.linkedIn} id="linkedIn" src="https://img.icons8.com/ios/50/000000/linkedin-filled.png" alt=""/>
             </div>
         );
     }
