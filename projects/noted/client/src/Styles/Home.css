@@ -1,0 +1,10 @@
+.homeBackground{
+    background-color: grey;
+    border: 15px ridge silver;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-top: 30px;
+}

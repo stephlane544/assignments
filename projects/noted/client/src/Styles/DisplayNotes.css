@@ -1,0 +1,62 @@
+.noteContainer{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: max-content;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 17%;
+}
+
+.noteTitle{
+    padding-top: 10%;
+}
+
+.noteButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.editNote, .deleteNote, .saveNote{
+    width: 30px;
+    height: 30px;
+}
+
+.saveNoteButton{
+    border: none;
+    background-color: #ecece300;
+
+}
+
+.editNoteForm{
+    padding-top: 5%;
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-rows: max-content;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 15%;
+}
+
+.editNoteForm > input{
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+select{
+    width: 50%
+}
+
+textarea{
+    height: 60px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;    
+    border: none;
+    background-color: #f9f9f9;
+}
