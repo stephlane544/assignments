@@ -1,0 +1,82 @@
+.collectionContainer{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: max-content;
+    height: 820px;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-left: 5%;
+    padding-top: 7%;
+}
+
+.collectionTitle{
+    padding-top: 10%;
+}
+
+.collectionButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.editCollection, .deleteCollection, .saveCollection{
+    width: 30px;
+    height: 30px;
+}
+
+.saveCollectionButton{
+    border: none;
+    background-color: #ecece300;
+
+}
+
+.editCollectionForm{
+    padding-top: 5%;
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-auto-rows: max-content;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 15%;
+}
+
+.editCollectionForm > input{
+    border-radius: 15px;
+    font-size: 20px;
+    background-color: #e2dfdf;
+    border: none;
+}
+
+select{
+    width: 50%
+}
+
+textarea{
+    height: 60px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;    
+    border: none;
+    background-color: #f9f9f9;
+}
+
+
+article{
+    background-position: center;
+    background-repeat: no-repeat;
+    height: max-content;
+    height: 50%;
+    width: 100%;
+}
+
+/* h1{
+    width: 400px;
+} */
+
+.collectionContainer > button{
+    background-color: white;
+    border: none;
+}

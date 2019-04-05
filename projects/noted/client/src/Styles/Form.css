@@ -1,0 +1,78 @@
+.formContainer{
+    display: table;
+    height: 70vh;
+    width: 100vw;
+}
+
+.formGridContainer{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.loginForm{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: max-content;
+    grid-gap: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm > input{
+    grid-column: 2/3;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #e2dfdf;
+    border: none;
+    text-align: center;
+    font-size: 30px
+}
+
+.loginForm > button{
+    grid-column: 2/3;
+    border: none;
+    background-color: #ecece300;
+    text-align: center;
+    font-size: 30px
+}
+
+.signupFormContainer{
+    display: table;
+    height: 50vh;
+    width: 100vw;
+}
+
+.signupFormGridContainer{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100vw;
+}
+
+.signupForm{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: max-content;
+    grid-gap: 25%;
+    justify-content: center;
+    align-items: center;
+}
+
+.signupForm > input{
+    grid-column: 2/3;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #e2dfdf;
+    border: none;
+    text-align: center;
+    font-size: 30px
+}
+
+.signupForm > button{
+    grid-column: 2/3;
+    border: none;
+    background-color: #ecece300;
+    text-align: center;
+    font-size: 30px
+}

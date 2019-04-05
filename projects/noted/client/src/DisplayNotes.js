@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import { withContext } from './dataProvider.js';
-import BluePostIt from './Images/bluePostIt.jpeg';
-import YellowPostIt from './Images/yellowPostIt.jpeg';
-import GreenPostIt from './Images/greenPostIt.jpg';
-import PinkPostIt from './Images/pinkPostIt.jpeg';
 import './Styles/DisplayNotes.css'
 
 

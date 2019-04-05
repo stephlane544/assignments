@@ -28,7 +28,8 @@ const userSchema = new Schema({
             title: String,
             pages:[
                 {
-                description: String
+                    title: String,
+                    description: String
                 }
             ]
         }

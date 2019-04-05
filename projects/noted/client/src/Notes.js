@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import DisplayNotes from './DisplayNotes.js';
 import { withContext } from './dataProvider.js';
-import BluePostIt from './Images/bluePostIt.jpeg';
-import YellowPostIt from './Images/yellowPostIt.jpeg';
-import GreenPostIt from './Images/greenPostIt.jpg';
-import PinkPostIt from './Images/pinkPostIt.jpeg';
 import './Styles/Notes.css';
 
 class Notes extends Component {
@@ -49,12 +45,7 @@ class Notes extends Component {
 
     render() {
         const mappedNotes = this.props.user.notes.map((note) => <DisplayNotes note={note} key={note._id}/>);
-        let randNum = Math.floor(Math.random() * 4) + 1;
-        let img;
-        if(randNum === 1) img = BluePostIt;
-        if(randNum === 2) img = GreenPostIt;
-        if(randNum === 3) img = PinkPostIt;
-        if(randNum === 4) img = YellowPostIt;
+        let img = 'https://png.pngtree.com/element_origin_min_pic/17/08/18/eb98370c6aaeb4f2d0b6a9f0fd9c6b48.jpg'
         return (
             <div className='notesGrid'>
                 {mappedNotes}

@@ -35,8 +35,12 @@ class dataProvider extends Component {
         this.setState(prevState => ({
             createNote: !prevState.createNote
         }))
-        console.log(this.state.createNote)
+    }
 
+    toggleCreateCollection = () => {
+        this.setState(prevState => ({
+            createCollection: !prevState.createCollection
+        }))
     }
 
     setLogin = () => {
@@ -52,7 +56,7 @@ class dataProvider extends Component {
     handleSubmit = e => {
         e.preventDefault();
         let userInfo;
-        this.state.login ? userInfo = {username: this.state.username, password: this.state.password} : userInfo = this.state.user;
+        this.state.login ? userInfo = {username: this.state.username, password: this.state.password} : userInfo = {username: this.state.username, password: this.state.password, firstName: this.state.firstName, email: this.state.email};
         this.state.login ? 
                 this.login(userInfo).then(() => this.props.history.push(`/dashboard/${this.state.username}`)) 
             : 
@@ -60,6 +64,7 @@ class dataProvider extends Component {
     }
 
     signup = (userInfo) => {
+        console.log(userInfo)
         return axios.post('/auth/signup', userInfo).then(res => {
             const { user, token } = res.data;
             localStorage.setItem('token', token);
@@ -73,12 +78,9 @@ class dataProvider extends Component {
     }
 
     login = (credentials) => {
-        console.log(credentials)
         return axios.post('/auth/login', credentials).then(res => {
             const { token, user } = res.data;
-            console.log(res.data)
             localStorage.setItem('token', token);
-            console.log(JSON.stringify(user))
             localStorage.setItem('user', JSON.stringify(user));
             this.setState({
                 user,
@@ -114,10 +116,7 @@ class dataProvider extends Component {
     }
 
     deleteNote = (noteId) => {
-        console.log(noteId)
-
         return tokenAxios.delete(`api/user/${this.state.user._id}/notes/${noteId}`).then(res => {
-            console.log(noteId)
             const user = res.data;
             localStorage.setItem('user', JSON.stringify(user));
             this.setState({
@@ -167,6 +166,7 @@ class dataProvider extends Component {
                 editNote: this.editNote,
                 deleteNote: this.deleteNote,
                 addNote: this.addNote,
+                toggleCreateCollection: this.toggleCreateCollection,
                 ...this.state
             }}>
                     {this.props.children}
