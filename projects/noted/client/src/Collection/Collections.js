@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import DisplayCollections from './DisplayCollections.js';
-import { withContext } from './dataProvider.js';
-import './Styles/Collections.css';
+import { withContext } from '../dataProvider.js';
+import '../Styles/Collections.css';
+import whitePlus from '../Images/whitePlus.svg'
 
 class Collections extends Component {
     constructor(){
         super()
         this.state = {
-            collectionTitle: '',
             pageTitle: '',
             firstPageContent: ''
         }
@@ -20,7 +20,7 @@ class Collections extends Component {
     addCollection = e => {
         e.preventDefault();
         let newCollection = {
-            collectionTitle: this.state.collectionTitle,
+            title: this.state.collectionTitle,
         }
         this.props.addCollection(newCollection);
     }
@@ -28,12 +28,12 @@ class Collections extends Component {
 
     render() {
         const mappedCollections = this.props.user.collections.map((collection) => <DisplayCollections collection={collection} key={collection._id}/>);
-        let img = 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3742e318412113.5634bc1e2876f.jpg'
+        const bookImg = 'https://cdn.pixabay.com/photo/2018/01/03/09/09/book-3057902__340.png'
         return (
             <div className='collectionsGrid'>
                 {mappedCollections}
                 <DisplayCollections />
-                <div className='addCollectionContainer' style={{backgroundImage: `url(${img})`}}>
+                <div className='addCollectionContainer' style={{backgroundImage: `url(${bookImg})`}}>
                     {this.props.createCollection ?
                         <form className='createCollectionForm' onSubmit={this.addCollection}>
                             <input type="text"
@@ -43,23 +43,10 @@ class Collections extends Component {
                                 onChange={this.handleChange}
                                 required
                             />
-                            {/* <input type="text"
-                                placeholder='Page Title'
-                                name='pageTitle'
-                                value={this.pageTitle}
-                                onChange={this.handleChange}
-                            />
-                            <textarea type="text"
-                                placeholder='First Page Content'
-                                name='firstPageContent'
-                                value={this.firstPageContent}
-                                onChange={this.handleChange}
-                                required
-                            /> */}
                             <button className='addCollectionButton'>Add Collection</button>
                         </form>
                     :
-                    null
+                        <img onClick={this.props.toggleCreateCollection} src={whitePlus}></img>
                     }
                 </div>
             </div>

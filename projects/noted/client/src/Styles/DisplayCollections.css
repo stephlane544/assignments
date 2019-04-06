@@ -3,29 +3,36 @@
     background-position: center;
     background-repeat: no-repeat;
     height: max-content;
-    height: 820px;
-    width: 60%;
+    height: 636px;
+    width: 49%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
+    margin-left: 14%;
     padding-left: 5%;
     padding-top: 7%;
+    color: white;
+    font-size: 30px;
+}
+
+.collectionView{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: max-content;
+    height: 50%;
+    vertical-align: middle;
+    border-radius: 5px;
+    display: table;
 }
 
 .collectionTitle{
     padding-top: 10%;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.collectionButtons{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
 
-.editCollection, .deleteCollection, .saveCollection{
-    width: 30px;
-    height: 30px;
-}
 
 .saveCollectionButton{
     border: none;
@@ -61,22 +68,4 @@ textarea{
     font-size: 20px;    
     border: none;
     background-color: #f9f9f9;
-}
-
-
-article{
-    background-position: center;
-    background-repeat: no-repeat;
-    height: max-content;
-    height: 50%;
-    width: 100%;
-}
-
-/* h1{
-    width: 400px;
-} */
-
-.collectionContainer > button{
-    background-color: white;
-    border: none;
 }

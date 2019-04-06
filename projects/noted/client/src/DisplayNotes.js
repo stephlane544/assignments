@@ -28,7 +28,7 @@ class DisplayNotes extends Component {
         let backgroundImg;
         console.log(this.state.postItColor)
         if(this.state.postItColor === 'blue'){
-            backgroundImg = 'hhttps://i.pinimg.com/400x300/13/fb/e7/13fbe75311f5b7eb89b75dc43efa3c31.jpg'
+            backgroundImg = 'https://i.pinimg.com/400x300/13/fb/e7/13fbe75311f5b7eb89b75dc43efa3c31.jpg'
         }else if(this.state.postItColor === 'green'){
             backgroundImg = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3XSNAqDitLJqPYY3S7AeMjN4L6iMhEaCeA0E5lbqnreuc_x17'
         }else if(this.state.postItColor ==='pink'){

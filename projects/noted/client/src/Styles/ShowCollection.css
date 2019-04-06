@@ -1,0 +1,64 @@
+.collectionPage{
+    width: 100vw;
+    margin-bottom: 2%;
+}
+
+.flipPage{
+    width: 70vw !important;
+}
+
+.collectionTitleAndEdit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2%;
+    text-align: center;
+}
+
+
+.editCollection, .deleteCollection, .saveCollection{
+    width: 30px;
+    height: 30px;
+}
+
+.editDeleteButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 5%;
+}
+
+.bookAndNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+}
+
+
+.page{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.nextPage, .previousPage{
+    width: 5vw;
+}
+
+.bookAndNav > button{
+    background-color: white;
+    border: none;
+}
+
+
+.rfp-touchZone{
+    height: 50% !important;
+}
+
+.rfp-touchZone-next{
+    margin-bottom: 65.3% !important;
+}

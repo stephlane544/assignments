@@ -24,7 +24,10 @@ class dataProvider extends Component {
             login: false,
             createNote: false,
             createCollection: false,
+            createPage: false,
+            editCollectionBoolean: false,
             newNote: '',
+            _id:'',
             title: '',
             description: '',
             postItColor: ''
@@ -42,6 +45,12 @@ class dataProvider extends Component {
             createCollection: !prevState.createCollection
         }))
     }
+
+    toggleCreatePage = () => {
+        this.setState(prevState => ({createPage: !prevState.createPage}))
+        
+    }
+
 
     setLogin = () => {
         this.setState(prevState => ({
@@ -64,7 +73,6 @@ class dataProvider extends Component {
     }
 
     signup = (userInfo) => {
-        console.log(userInfo)
         return axios.post('/auth/signup', userInfo).then(res => {
             const { user, token } = res.data;
             localStorage.setItem('token', token);
@@ -142,6 +150,83 @@ class dataProvider extends Component {
         })
     }
 
+    addCollection = (newCollection) => {
+        
+        this.setState(prevState => ({
+            newCollection,
+            createCollection: !prevState.createCollection
+        }))
+        return tokenAxios.put(`api/user/${this.state.user._id}/collections`, newCollection).then(res => {
+            const user = res.data;
+            localStorage.setItem('user', JSON.stringify(user));
+            this.setState({
+                user
+            })
+            return res;
+        })
+    }
+
+    editCollection = (editedCollection) => {
+        console.log('fired')
+        return tokenAxios.put(`api/user/${this.state.user._id}/collections/${editedCollection._id}`, editedCollection).then(res => {
+            const user = res.data;
+            localStorage.setItem('user', JSON.stringify(user));
+            this.setState({
+                user
+            })
+            return res;
+        })
+    }
+
+    deleteCollection = (collectionId) => {
+        return tokenAxios.delete(`api/user/${this.state.user._id}/collections/${collectionId}`).then(res => {
+            const user = res.data;
+            localStorage.setItem('user', JSON.stringify(user));
+            this.setState({
+                user
+            })
+            return res;
+        })
+    }
+
+    addPage = (newPage, collection) => {
+        console.log(collection)
+        this.setState(prevState => ({
+            newPage,
+            createPage: !prevState.createPage,
+        }))
+        return tokenAxios.put(`api/user/${this.state.user._id}/collections/${collection._id}/pages`, newPage).then(res => {
+            const user = res.data;
+            localStorage.setItem('user', JSON.stringify(user));
+            this.setState({
+                user
+            })
+            return res;
+        }).then(() => this.props.history.push({pathname:`/collections/${collection._id}`, state: {collection}}))
+    }
+
+    editPage = (editedPage) => {
+        return tokenAxios.put(`api/user/${this.state.user._id}/pages/${editedPage._id}`, editedPage).then(res => {
+            const user = res.data;
+            localStorage.setItem('user', JSON.stringify(user));
+            this.setState({
+                user
+            })
+            return res;
+        })
+    }
+
+    deletePage = (pageId) => {
+        return tokenAxios.delete(`api/user/${this.state.user._id}/pages/${pageId}`).then(res => {
+            const user = res.data;
+            localStorage.setItem('user', JSON.stringify(user));
+            this.setState({
+                user
+            })
+            return res;
+        })
+    }
+
     editUser = (editedUser) => {
         return tokenAxios.put(`api/user/${this.state.user._id}`, editedUser).then(res => {
             const { user } = res.data;
@@ -167,6 +252,14 @@ class dataProvider extends Component {
                 deleteNote: this.deleteNote,
                 addNote: this.addNote,
                 toggleCreateCollection: this.toggleCreateCollection,
+                editCollection: this.editCollection,
+                deleteCollection: this.deleteCollection,
+                addCollection: this.addCollection,
+                toggleCreatePage: this.toggleCreatePage,
+                editPage: this.editPage,
+                deletePage: this.deletePage,
+                addPage: this.addPage,
+                toggleEditCollection: this.toggleEditCollection,
                 ...this.state
             }}>
                     {this.props.children}

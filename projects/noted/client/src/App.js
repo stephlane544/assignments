@@ -7,7 +7,9 @@ import Navbar from './Navbar.js';
 import Home from './Home.js';
 import Signup from './Auth/Signup.js';
 import Notes from './Notes.js';
-import Collections from './Collections.js';
+import Collections from './Collection/Collections.js';
+import AddPage from './Collection/AddPage';
+import ShowCollection from './Collection/ShowCollection';
 
 
 class App extends Component {
@@ -21,9 +23,10 @@ class App extends Component {
           <Route path='/signup' component={Signup} />
           <Route path='/dashboard' component={Dashboard} />
           <Route path='/notes' component={Notes} />
-          <Route path='/collections' component={Collections} />
+          <Route exact path='/collections' component={Collections} />
+          <Route path='/collections/:collectionId' component={ShowCollection} />
+          <Route path='/addPage' component={AddPage} />
         </Switch>
-
       </div>
     );
   }
