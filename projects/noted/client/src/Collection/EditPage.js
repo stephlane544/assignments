@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { withContext } from '../dataProvider';
 import '../Styles/AddPage.css';
 
-class AddPage extends Component {
+class EditPage extends Component {
     constructor(){
         super();
         this.state = {
@@ -15,19 +14,25 @@ class AddPage extends Component {
         this.setState({[e.target.name]: e.target.value})
     }
 
-    addPage = e => {
+    editPage = e => {
         e.preventDefault();
-        const newPage = {
+        let {collection} = this.props.location.state
+        const editedPage = {
             title: this.state.title,
             description: this.state.description
         }
-        this.props.addPage(newPage, this.props.location.state.collection).then(this.props.toggleCreatePage())
+        this.props.editPage(editedPage, collection._id, this.props.page._id).then(this.props.history.push({pathname: `/collections/${collection._id}`, state: {collection}}))
+    }
+
+    componentDidMount(){
+        let { title, description } = this.props.location.state.page
+        this.setState({title, description})
     }
 
     render() {
         console.log(this.props.location.state)
         return (
-            <form className='createPageForm' onSubmit={this.addPage}>
+            <form className='editPageForm' onSubmit={this.editPage}>
                 <input type="text"
                     placeholder='Page Title'
                     name='title'
@@ -41,10 +46,10 @@ class AddPage extends Component {
                     onChange={this.handleChange}
                     required
                 />
-                <button className='addPageButton'>Add Page</button>
+                <button className='savePageButton'>Save Page</button>
             </form> 
         );
     }
 }
 
-export default withContext(AddPage);
+export default EditPage;

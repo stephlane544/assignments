@@ -10,8 +10,21 @@
 .collectionTitleAndEdit{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     padding-top: 2%;
+    text-align: center;
+}
+
+.editCollectionForm{
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.editCollectionForm > input{
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+    background-color: #e2dfdf;
     text-align: center;
 }
 
@@ -21,11 +34,39 @@
     height: 30px;
 }
 
+.saveCollection{
+    margin-bottom: -30%;
+}
+
+.saveCollectionButton{
+    background-color: none;
+    border: none;
+}
+
 .editDeleteButtons{
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-left: 5%;
+}
+
+.addNewPage{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.plusIconContainer{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plusIcon{
+    width: 80px;
+    height: 80px;
 }
 
 .bookAndNav{
@@ -34,7 +75,6 @@
     justify-content: center;
     width: 100vw;
 }
-
 
 .page{
     background-size: cover;
@@ -46,7 +86,7 @@
 }
 
 .nextPage, .previousPage{
-    width: 5vw;
+    font-size: 15px;
 }
 
 .bookAndNav > button{
@@ -54,11 +94,10 @@
     border: none;
 }
 
-
-.rfp-touchZone{
+/* .rfp-touchZone{
     height: 50% !important;
 }
 
 .rfp-touchZone-next{
     margin-bottom: 65.3% !important;
-}
+} */

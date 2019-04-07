@@ -10,6 +10,7 @@ import Notes from './Notes.js';
 import Collections from './Collection/Collections.js';
 import AddPage from './Collection/AddPage';
 import ShowCollection from './Collection/ShowCollection';
+import EditPage from './Collection/EditPage.js';
 
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route exact path='/collections' component={Collections} />
           <Route path='/collections/:collectionId' component={ShowCollection} />
           <Route path='/addPage' component={AddPage} />
+          <Route path='/editPage/:pageId' component={EditPage} />
         </Switch>
       </div>
     );

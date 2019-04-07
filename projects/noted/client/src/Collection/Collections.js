@@ -32,7 +32,6 @@ class Collections extends Component {
         return (
             <div className='collectionsGrid'>
                 {mappedCollections}
-                <DisplayCollections />
                 <div className='addCollectionContainer' style={{backgroundImage: `url(${bookImg})`}}>
                     {this.props.createCollection ?
                         <form className='createCollectionForm' onSubmit={this.addCollection}>
@@ -46,7 +45,7 @@ class Collections extends Component {
                             <button className='addCollectionButton'>Add Collection</button>
                         </form>
                     :
-                        <img onClick={this.props.toggleCreateCollection} src={whitePlus}></img>
+                        <img onClick={this.props.toggleCreateCollection} src={whitePlus} alt=''></img>
                     }
                 </div>
             </div>

@@ -117,9 +117,9 @@ const apiRoute = express.Router();
         // Page Routes
 
        // adding a new page
-       apiRoute.put('/user/:userId/collections/:collectionId/pages', async (req, res, next) => {
-           console.log('fired')
-           console.log(req.params.userId)
+    apiRoute.put('/user/:userId/collections/:collectionId/pages', async (req, res, next) => {
+        console.log('fired')
+        console.log(req.params.userId)
         try{
             const user = await User.findOne({_id: req.params.userId})
             const collectionToChange = user.collections.id(req.params.collectionId)

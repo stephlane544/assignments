@@ -54,24 +54,12 @@ class DisplayCollections extends Component {
     }
 
     render() {
-        console.log(this.props)
         const bookImg = 'https://cdn.pixabay.com/photo/2018/01/03/09/09/book-3057902__340.png'
         return (
             <div className='collectionContainer' >
-                {!this.state.editCollection ?
                     <div className='collectionView' onClick={this.showCollection} style={{backgroundImage: `url(${bookImg})`}}>
                         <div className='collectionTitle'>{this.state.title}</div>
                     </div>
-                :
-                    <form className='editCollectionForm' onSubmit={this.handleSubmit}>
-                        <input type="text"
-                            placeholder='title'
-                            name='title'
-                            value={this.state.title}
-                            onChange={this.handleChange} />
-                        <button className='saveCollectionButton'><img className='saveCollection' src="https://img.icons8.com/wired/64/000000/save-as.png" alt='' /></button>
-                    </form> 
-                } 
             </div>
         );
     }
