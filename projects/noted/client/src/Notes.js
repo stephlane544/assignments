@@ -66,13 +66,16 @@ class Notes extends Component {
                                 onChange={this.handleChange}
                                 required
                             />
-                            <select onChange={this.handleChange} name='postItColor' required id="">
-                                <option value=""></option>
-                                <option value="blue">Blue</option>
-                                <option value="green">Green</option>
-                                <option value="pink">Pink</option>
-                                <option value="yellow">Yellow</option>
-                            </select>
+                            <div className='postItColorSelector'>
+                                <label>Post it color:</label>
+                                <select onChange={this.handleChange} name='postItColor' required id="">
+                                    <option value=""></option>
+                                    <option value="blue">Blue</option>
+                                    <option value="green">Green</option>
+                                    <option value="pink">Pink</option>
+                                    <option value="yellow">Yellow</option>
+                                </select>
+                            </div>
                             <button className='addNoteButton'>Add Note</button>
                         </form>
                     :

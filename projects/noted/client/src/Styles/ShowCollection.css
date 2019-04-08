@@ -5,6 +5,7 @@
 
 .flipPage{
     width: 70vw !important;
+    z-index: 500;
 }
 
 .collectionTitleAndEdit{
@@ -13,6 +14,14 @@
     justify-content: space-around;
     padding-top: 2%;
     text-align: center;
+}
+
+.collectionPageTitle{
+    font-size: 40px;
+}
+
+.editDeleteTitleContainer{
+    padding-top: 1%;
 }
 
 .editCollectionForm{
@@ -52,12 +61,11 @@
 
 .addNewPage{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 }
 
 .plusIconContainer{
-    grid-column: 1/2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,13 +88,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 510px;
     border-radius: 5px;
     text-align: center;
 }
 
 .nextPage, .previousPage{
-    font-size: 15px;
+    font-size: 20px;
+    padding: 1%;
 }
 
 .bookAndNav > button{
@@ -101,3 +110,23 @@
 .rfp-touchZone-next{
     margin-bottom: 65.3% !important;
 } */
+
+
+
+
+@media (max-width: 850px){
+
+    .page{
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+        height: 1000px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .flipPage{
+        width: 100vw !important;
+        z-index: 500;
+    }
+}

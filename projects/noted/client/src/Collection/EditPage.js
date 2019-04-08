@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../Styles/AddPage.css';
+import { withContext } from '../dataProvider.js';
 
 class EditPage extends Component {
     constructor(){
@@ -21,7 +22,8 @@ class EditPage extends Component {
             title: this.state.title,
             description: this.state.description
         }
-        this.props.editPage(editedPage, collection._id, this.props.page._id).then(this.props.history.push({pathname: `/collections/${collection._id}`, state: {collection}}))
+        // console.log(this.state.description)
+        this.props.editPage(editedPage, collection, this.props.location.state.page._id).then(this.props.history.push({pathname: `/collections/${collection._id}`, state: {collection}}))
     }
 
     componentDidMount(){
@@ -30,7 +32,7 @@ class EditPage extends Component {
     }
 
     render() {
-        console.log(this.props.location.state)
+        // console.log(this.props.location.state)
         return (
             <form className='editPageForm' onSubmit={this.editPage}>
                 <input type="text"
@@ -52,4 +54,4 @@ class EditPage extends Component {
     }
 }
 
-export default EditPage;
+export default withContext(EditPage);

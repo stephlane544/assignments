@@ -23,8 +23,6 @@ class ShowCollection extends Component {
     }
 
     toggleEditCollection = () => {
-        console.log(this.props.location.state.collection)
-        console.log(this.state.title)
         this.setState(prevState => ({
             editCollection: !prevState.editCollection
         }))
@@ -57,6 +55,7 @@ class ShowCollection extends Component {
         }
     }
     render() {
+        // console.log(this.props.location.state)
         let { title } = this.props.location.state.collection;
         const mappedPages = this.props.location.state.collection.pages.map((page) => <DisplayPages page={page} collection={this.props.location.state.collection} key={page._id}/>);
         return (
@@ -65,7 +64,7 @@ class ShowCollection extends Component {
                     <div className='collectionTitleAndEdit'>
                         <div></div>
                         <div className='collectionPageTitle'>{title}</div>
-                        <div>
+                        <div className='editDeleteTitleContainer'>
                             <img onClick={this.toggleEditCollection} className='editCollection' src="https://img.icons8.com/dotty/80/000000/edit.png" alt=''></img>
                             <img className='deleteCollection' onClick={this.deleteCollection} src='https://img.icons8.com/windows/32/000000/trash.png' alt=''></img>
                         </div>
@@ -82,7 +81,7 @@ class ShowCollection extends Component {
                 } 
                 <div className='bookAndNav'>
                     <button className='previousPage' onClick={() => this.flipPage.gotoPreviousPage()}>Previous Page</button>
-                    <FlipPage className='flipPage' ref={(component) => { this.flipPage = component; }} orientation='horizontal' uncutPages='true' flipOnTouch='true' > 
+                    <FlipPage className='flipPage' ref={(component) => { this.flipPage = component; }} orientation='horizontal' uncutPages='true' > 
                         {mappedPages}
                         <article className='page addNewPage' style={{backgroundImage: `url(${bookImg})`}}>
                             <div className='plusIconContainer'>

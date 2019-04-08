@@ -5,6 +5,7 @@
     display: grid;
     grid-gap: 2%;
     grid-template-columns: 2fr 4fr 1fr 1fr  1fr 1fr 1fr;
+    font-size: 30px;
 }
 
 .links{
@@ -24,44 +25,125 @@
 
 .login{
     padding-right: 15%;
-    font-size: 30px;
     grid-column: 5/6;
 
 }
 
 .signup{
-
-    font-size: 30px;
     width: 100%;
     grid-column: 6/7;
 } 
 
-.dashboard{
-    font-size: 30px;
-    grid-column: 3/4;
+.dashboard, .notes, .collections{
     padding-right: 5%;
 }
 
+.dashboard{
+    grid-column: 3/4;
+}
+
 .notes{
-    font-size: 30px;
     grid-column: 4/5;
-    padding-right: 5%;
 
 }
 
 .collections{
-    font-size: 30px;
     grid-column: 5/6;
-    padding-right: 5%;
 
 }
 
 .logout{
-    font-size: 30px;
     grid-column: 6/7;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+}
+
+.homeVerticalAlign{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.homeDropBtnContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.dropdown{
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.dropdownContent{
+    height: 0;
+    font-size: 0;
+    text-align: center;
+}
+
+.active{
+    text-decoration: none;
+    color: #98583b;
+    margin: 20px;
+}
+
+.show{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90%;
+    width: 30%;
+    z-index: 1000000;
+    background-color: white;
+    color: black; 
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: -2%;;
+}  
+
+.show > a{
+    color: black;
+}
+
+
+.title{
+    background-color: #5b5c67;
+    font-size: 60px;
+    text-align: center;
+    color: #71331f;
+}
+
+.dropbtn{
+    background-color: #ffffff03;
+    border: none;
+    /* position: fixed;
+    margin-top: 5%;
+    margin-right: -5%; */
+}
+
+.dropbtn > div{
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+@media (min-width: 820px){
+    .dropdown{
+        display: none;
+    }
+}
+
+@media (max-width: 820px){
+
+
+    .logout, .collections, .notes, .dashboard, .login, .signup{
+        display: none;
+    }
 }

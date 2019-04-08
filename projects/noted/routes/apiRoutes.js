@@ -47,7 +47,7 @@ const apiRoute = express.Router();
     })
 
     // deleting a note
-    apiRoute.delete('/user/:userId/notes/:noteId', async (req, res, next) => {
+    apiRoute.delete('/user/:userId/notes/:noteId/delete', async (req, res, next) => {
         try{
             const user = await User.findOne({_id: req.params.userId})
             user.notes.pull(req.params.noteId)
@@ -60,11 +60,48 @@ const apiRoute = express.Router();
         }
     })
 
+    
 
     // Collection Routes
 
+
+
+    // deleting a collection
+    apiRoute.put('/user/:userId/collections/:collectionId/delete', async (req, res, next) => {
+        try{
+            const user = await User.findOneAndUpdate({_id: req.params.userId}, {$pull: {collections: {_id: req.params.collectionId}}}, {new: true})
+            console.log(user)
+            return res.status(200).send(user)
+        }
+        catch (err){
+            console.log(err)
+            return next(err)
+        }
+    })
+
+
+
+        // updating a collection
+        apiRoute.put('/user/:userId/collections/:collectionId', async (req, res, next) => {
+            console.log('put route hit')
+            try{
+                const user = await User.findOne({_id: req.params.userId})
+                const collectionToChange = user.collections.id(req.params.collectionId)
+                collectionToChange.set(req.body)
+                user.save()
+                console.log(collectionToChange)
+                if(collectionToChange) {
+                    return res.status(200).send(user)
+                }
+            }
+            catch (err){
+                console.log(err)
+                return next(err)
+            }
+        })
+
        // adding a new collection
-       apiRoute.put('/user/:userId/collections', async (req, res, next) => {
+    apiRoute.put('/user/:userId/collections', async (req, res, next) => {
         try{
             const user = await User.findOne({_id: req.params.userId})
             user.collections.push(req.body)
@@ -78,38 +115,7 @@ const apiRoute = express.Router();
         }
     })
 
-    // updating a collection
-    apiRoute.put('/user/:userId/collections/:collectionId', async (req, res, next) => {
-        try{
-            const user = await User.findOne({_id: req.params.userId})
-            const collectionToChange = user.collections.id(req.params.collectionId)
-            collectionToChange.set(req.body)
-            console.log(collectionToChange)
-            user.save()
-            if(collectionToChange) {
-                return res.status(200).send(user)
-            }
-        }
-        catch (err){
-            console.log(err)
-            return next(err)
-        }
-    })
 
-    // deleting a collection
-    apiRoute.delete('/user/:userId/collections/:collectionId', async (req, res, next) => {
-        try{
-            const user = await User.findOne({_id: req.params.userId})
-            user.collections.pull(req.params.collectionId)
-            user.save()
-            console.log(user)
-            return res.status(200).send(user)
-        }
-        catch (err){
-            console.log(err)
-            return next(err)
-        }
-    })
     
 
 
@@ -137,12 +143,13 @@ const apiRoute = express.Router();
     // updating a page
     apiRoute.put('/user/:userId/collections/:collectionId/pages/:pageId', async (req, res, next) => {
         try{
-            const user = await User.findOne({_id: req.params.userId})
-            const pageToChange = user.pages.id(req.params.pageId)
-            pageToChange.set(req.body)
-            console.log(pageToChange)
+            const user = await User.findById(req.params.userId)
+            const collection = user.collections.id(req.params.collectionId)
+            const page = collection.pages.id(req.params.pageId)
+            page.set(req.body)
+            console.log(page)
             user.save()
-            if(pageToChange) {
+            if(page) {
                 return res.status(200).send(user)
             }
         }
@@ -153,11 +160,18 @@ const apiRoute = express.Router();
     })
 
     // deleting a page
-    apiRoute.delete('/user/:userId/collections/:collectionId/pages/:pageId', async (req, res, next) => {
+    apiRoute.put('/user/:userId/collections/:collectionId/pages/:pageId/delete', async (req, res, next) => {
         try{
-            const user = await User.findOne({_id: req.params.userId})
-            user.pages.pull(req.params.pageId)
-            user.save()
+            const user = await User.findById(req.params.userId)
+            const collection = user.collections.id(req.params.collectionId)
+            const page = collection.pages.id(req.params.pageId)
+            page.remove()
+            await user.save()
+
+
+
+            // const user = await User.findOneAndUpdate({_id: req.params.userId}, {$pull: {collections: {_id: req.params.collectionId, pages: {_id: req.params.pageId}}}}, {new: true})
+            // console.log(user)
             return res.status(200).send(user)
         }
         catch (err){

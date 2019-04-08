@@ -35,12 +35,20 @@ class DisplayPages extends Component {
     }
 
     deletePage = () => {
-        if(window.confirm('Do you really wish to delete this page?')) this.props.deletePage(this.state._id)
+        if(window.confirm('Do you really wish to delete this page?')) this.props.deletePage(this.state._id, this.props.collection)
+    }
+
+    componentDidUpdate(prevProps){
+        if(prevProps.page.description !== this.props.page.description){
+            let { title, description, _id} = this.props.page
+            console.log(description)
+            this.setState({ _id, title, description})
+        }
     }
 
     componentDidMount(){
         let { title, description, _id} = this.props.page
-        this.setState({ _id, title, description})
+            this.setState({ _id, title, description})
     }
 
     render() {

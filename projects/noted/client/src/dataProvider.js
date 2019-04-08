@@ -67,9 +67,9 @@ class dataProvider extends Component {
         let userInfo;
         this.state.login ? userInfo = {username: this.state.username, password: this.state.password} : userInfo = {username: this.state.username, password: this.state.password, firstName: this.state.firstName, email: this.state.email};
         this.state.login ? 
-                this.login(userInfo).then(() => this.props.history.push(`/dashboard/${this.state.username}`)) 
+                this.login(userInfo).then(() => this.props.history.push(`/userprofile`)) 
             : 
-                this.signup(userInfo).then(() => this.props.history.push(`/dashboard/${this.state.username}`))
+                this.signup(userInfo).then(() => this.props.history.push(`/uderprofile`))
     }
 
     signup = (userInfo) => {
@@ -86,6 +86,7 @@ class dataProvider extends Component {
     }
 
     login = (credentials) => {
+        console.log(credentials)
         return axios.post('/auth/login', credentials).then(res => {
             const { token, user } = res.data;
             localStorage.setItem('token', token);
@@ -113,7 +114,7 @@ class dataProvider extends Component {
     }
 
     editNote = (editedNote) => {
-        return tokenAxios.put(`api/user/${this.state.user._id}/notes/${editedNote._id}`, editedNote).then(res => {
+        return tokenAxios.put(`/api/user/${this.state.user._id}/notes/${editedNote._id}`, editedNote).then(res => {
             const user = res.data;
             localStorage.setItem('user', JSON.stringify(user));
             this.setState({
@@ -124,7 +125,7 @@ class dataProvider extends Component {
     }
 
     deleteNote = (noteId) => {
-        return tokenAxios.delete(`api/user/${this.state.user._id}/notes/${noteId}`).then(res => {
+        return tokenAxios.delete(`/api/user/${this.state.user._id}/notes/${noteId}`).then(res => {
             const user = res.data;
             localStorage.setItem('user', JSON.stringify(user));
             this.setState({
@@ -140,7 +141,7 @@ class dataProvider extends Component {
             newNote,
             createNote: !prevState.createNote
         }))
-        return tokenAxios.put(`api/user/${this.state.user._id}/notes`, newNote).then(res => {
+        return tokenAxios.put(`/api/user/${this.state.user._id}/notes`, newNote).then(res => {
             const user = res.data;
             localStorage.setItem('user', JSON.stringify(user));
             this.setState({
@@ -156,7 +157,7 @@ class dataProvider extends Component {
             newCollection,
             createCollection: !prevState.createCollection
         }))
-        return tokenAxios.put(`api/user/${this.state.user._id}/collections`, newCollection).then(res => {
+        return tokenAxios.put(`/api/user/${this.state.user._id}/collections`, newCollection).then(res => {
             const user = res.data;
             localStorage.setItem('user', JSON.stringify(user));
             this.setState({
@@ -167,27 +168,28 @@ class dataProvider extends Component {
     }
 
     editCollection = (editedCollection) => {
-        console.log('fired')
-        return tokenAxios.put(`api/user/${this.state.user._id}/collections/${editedCollection._id}`, editedCollection).then(res => {
+
+        return tokenAxios.put(`/api/user/${this.state.user._id}/collections/${editedCollection._id}`, editedCollection).then(res => {
             const user = res.data;
             localStorage.setItem('user', JSON.stringify(user));
             this.setState({
                 user
             })
             return res;
-        })
+        }).then(() => this.pushToCollection(editedCollection._id))
     }
 
     deleteCollection = (collectionId) => {
-        return tokenAxios.delete(`api/user/${this.state.user._id}/collections/${collectionId}`).then(res => {
+        return tokenAxios.put(`/api/user/${this.state.user._id}/collections/${collectionId}/delete`).then(res => {
             const user = res.data;
             localStorage.setItem('user', JSON.stringify(user));
             this.setState({
                 user
             })
             return res;
-        })
+        }).then(() => this.props.history.push({pathname:`/collections/`}))
     }
+
 
     addPage = (newPage, collection) => {
         console.log(collection)
@@ -195,47 +197,56 @@ class dataProvider extends Component {
             newPage,
             createPage: !prevState.createPage,
         }))
-        return tokenAxios.put(`api/user/${this.state.user._id}/collections/${collection._id}/pages`, newPage).then(res => {
+        return tokenAxios.put(`/api/user/${this.state.user._id}/collections/${collection._id}/pages`, newPage).then(res => {
             const user = res.data;
             localStorage.setItem('user', JSON.stringify(user));
             this.setState({
                 user
             })
             return res;
-        }).then(() => this.props.history.push({pathname:`/collections/${collection._id}`, state: {collection}}))
+        }).then(() => this.pushToCollection(collection._id))
     }
 
-    editPage = (editedPage) => {
-        return tokenAxios.put(`api/user/${this.state.user._id}/pages/${editedPage._id}`, editedPage).then(res => {
+    editPage = (editedPage, collection, pageId) => {
+        return tokenAxios.put(`/api/user/${this.state.user._id}/collections/${collection._id}/pages/${pageId}`, editedPage).then(res => {
             const user = res.data;
             localStorage.setItem('user', JSON.stringify(user));
-            this.setState({
-                user
-            })
+            this.setState({user})
             return res;
-        })
+        }).then(() => this.pushToCollection(collection._id))
     }
 
-    deletePage = (pageId) => {
-        return tokenAxios.delete(`api/user/${this.state.user._id}/pages/${pageId}`).then(res => {
+    deletePage = (pageId, collection) => {
+        return tokenAxios.put(`/api/user/${this.state.user._id}/collections/${collection._id}/pages/${pageId}/delete`).then(res => {
             const user = res.data;
             localStorage.setItem('user', JSON.stringify(user));
             this.setState({
                 user
             })
             return res;
-        })
+        }).then(() => this.pushToCollection(collection._id))
+    }
+
+    pushToCollection = (collectionId) => {
+        const collection = this.state.user.collections.find(collection => collection._id === collectionId)
+        this.props.history.push({pathname:`/collections/${collection._id}`, state: {collection}})
     }
 
     editUser = (editedUser) => {
-        return tokenAxios.put(`api/user/${this.state.user._id}`, editedUser).then(res => {
-            const { user } = res.data;
+        return tokenAxios.put(`/api/user/${this.state.user._id}`, editedUser).then(res => {
+            const user = res.data;
             localStorage.setItem('user', JSON.stringify(user));
             this.setState({
                 user
             })
+            console.log(user)
             return res;
-        })
+        }).then(() => this.pushToProfile())
+    }
+
+    pushToProfile = () => {
+        const userInfo = {username: this.state.user.username, password: this.state.password} 
+        this.login(userInfo)
     }
     render() {
         return (

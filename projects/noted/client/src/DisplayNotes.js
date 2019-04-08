@@ -28,7 +28,7 @@ class DisplayNotes extends Component {
         let backgroundImg;
         console.log(this.state.postItColor)
         if(this.state.postItColor === 'blue'){
-            backgroundImg = 'https://i.pinimg.com/400x300/13/fb/e7/13fbe75311f5b7eb89b75dc43efa3c31.jpg'
+            backgroundImg = 'https://pngimage.net/wp-content/uploads/2018/06/post-it-blue-png-4.png'
         }else if(this.state.postItColor === 'green'){
             backgroundImg = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3XSNAqDitLJqPYY3S7AeMjN4L6iMhEaCeA0E5lbqnreuc_x17'
         }else if(this.state.postItColor ==='pink'){
@@ -83,6 +83,7 @@ class DisplayNotes extends Component {
                             value={this.state.description}
                             onChange={this.handleChange} />
                         <div>
+                            <label>Post it color:</label>
                             <select name='postItColor' onChange={this.handleChange} required id="">
                                 <option value=""></option>
                                 <option value="blue">Blue</option>
