@@ -41,7 +41,7 @@ class AddPage extends Component {
                     onChange={this.handleChange}
                     required
                 />
-                <button className='addPageButton'>Add Page</button>
+                <button className='addPageButton save'>Add Page</button>
             </form> 
         );
     }

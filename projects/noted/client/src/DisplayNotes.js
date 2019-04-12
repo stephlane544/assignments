@@ -66,8 +66,8 @@ class DisplayNotes extends Component {
                         <div className='noteTitle'>{title}</div>
                         <div className='noteDescription'>{description}</div>
                         <div className='noteButtons'>
-                            <img onClick={this.toggleEdit} className='editNote' src="https://img.icons8.com/dotty/80/000000/edit.png" alt=''></img>
-                            <img onClick={this.deleteNote} src="https://img.icons8.com/windows/32/000000/trash.png" alt=''></img>
+                            <img onClick={this.toggleEdit} className='editNote edit' src="https://img.icons8.com/dotty/80/000000/edit.png" alt=''></img>
+                            <img onClick={this.deleteNote} className='delete' src="https://img.icons8.com/windows/32/000000/trash.png" alt=''></img>
                         </div>
                     </>
                 :
@@ -92,7 +92,7 @@ class DisplayNotes extends Component {
                                 <option value="yellow">Yellow</option>
                             </select>
                         </div>
-                        <button className='saveNoteButton'><img className='saveNote' src="https://img.icons8.com/wired/64/000000/save-as.png" alt='' /></button>
+                        <button className='saveNoteButton save'><img className='saveNote' src="https://img.icons8.com/wired/64/000000/save-as.png" alt='' /></button>
                     </form> 
                 }
             </div>

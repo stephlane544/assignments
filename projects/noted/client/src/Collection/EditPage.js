@@ -48,7 +48,7 @@ class EditPage extends Component {
                     onChange={this.handleChange}
                     required
                 />
-                <button className='savePageButton'>Save Page</button>
+                <button className='savePageButton save'>Save Page</button>
             </form> 
         );
     }

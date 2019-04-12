@@ -65,8 +65,8 @@ class ShowCollection extends Component {
                         <div></div>
                         <div className='collectionPageTitle'>{title}</div>
                         <div className='editDeleteTitleContainer'>
-                            <img onClick={this.toggleEditCollection} className='editCollection' src="https://img.icons8.com/dotty/80/000000/edit.png" alt=''></img>
-                            <img className='deleteCollection' onClick={this.deleteCollection} src='https://img.icons8.com/windows/32/000000/trash.png' alt=''></img>
+                            <img onClick={this.toggleEditCollection} className='editCollection edit' src="https://img.icons8.com/dotty/80/000000/edit.png" alt=''></img>
+                            <img className='deleteCollection delete' onClick={this.deleteCollection} src='https://img.icons8.com/windows/32/000000/trash.png' alt=''></img>
                         </div>
                     </div>
                 :
@@ -76,7 +76,7 @@ class ShowCollection extends Component {
                             name='title'
                             value={this.state.title}
                             onChange={this.handleChange} />
-                        <button className='saveCollectionButton'><img className='saveCollection' src="https://img.icons8.com/dotty/80/000000/save.png" alt='' /></button>
+                        <button className='saveCollectionButton save'><img className='saveCollection' src="https://img.icons8.com/dotty/80/000000/save.png" alt='' /></button>
                     </form> 
                 } 
                 <div className='bookAndNav'>
@@ -85,7 +85,7 @@ class ShowCollection extends Component {
                         {mappedPages}
                         <article className='page addNewPage' style={{backgroundImage: `url(${bookImg})`}}>
                             <div className='plusIconContainer'>
-                                <img className='plusIcon' onClick={this.toggleCreatePage} src={PlusIcon} alt=''/>
+                                <img className='plusIcon add' onClick={this.toggleCreatePage} src={PlusIcon} alt=''/>
                             </div>
                         </article>
                     </FlipPage>

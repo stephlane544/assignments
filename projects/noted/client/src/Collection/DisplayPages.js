@@ -63,8 +63,8 @@ class DisplayPages extends Component {
                 />
                 <div className='editAndDeletePage'>
                     <div className='editAndDeleteContainer'>
-                        <img onClick={this.toggleEditPage} className='editPage' src="https://img.icons8.com/dotty/80/000000/edit.png" alt=''></img>
-                        <img className='deletePage' onClick={this.deletePage} src='https://img.icons8.com/windows/32/000000/trash.png' alt=''></img>
+                        <img onClick={this.toggleEditPage} className='editPage edit' src="https://img.icons8.com/dotty/80/000000/edit.png" alt=''></img>
+                        <img className='deletePage delete' onClick={this.deletePage} src='https://img.icons8.com/windows/32/000000/trash.png' alt=''></img>
                     </div>
                 </div>
             </article>

@@ -57,7 +57,6 @@ class Notes extends Component {
                                 name='title'
                                 value={this.title}
                                 onChange={this.handleChange}
-                                // required
                             />
                             <input type="text"
                                 placeholder='Description'
@@ -76,10 +75,10 @@ class Notes extends Component {
                                     <option value="yellow">Yellow</option>
                                 </select>
                             </div>
-                            <button className='addNoteButton'>Add Note</button>
+                            <button className='addNoteButton save'>Add Note</button>
                         </form>
                     :
-                        <svg onClick={this.props.toggleCreateNote} className='addNote' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        <svg onClick={this.props.toggleCreateNote} className='addNote add' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                             width="48" height="48"
                             viewBox="0 0 192 192"
                             style={{fill: "#000000"}}>

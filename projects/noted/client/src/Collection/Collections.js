@@ -42,10 +42,10 @@ class Collections extends Component {
                                 onChange={this.handleChange}
                                 required
                             />
-                            <button className='addCollectionButton'>Add Collection</button>
+                            <button className='addCollectionButton save'>Add Collection</button>
                         </form>
                     :
-                        <img onClick={this.props.toggleCreateCollection} src={whitePlus} alt=''></img>
+                        <img onClick={this.props.toggleCreateCollection} className='add' src={whitePlus} alt=''></img>
                     }
                 </div>
             </div>
