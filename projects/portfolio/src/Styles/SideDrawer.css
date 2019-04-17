@@ -28,7 +28,7 @@
     justify-content: center;
 }
 
-.sideDrawer a {
+.sideLinks {
     color: white;
     text-decoration: none;
     text-align: center;
@@ -36,8 +36,8 @@
     font-family: 'Aclonica';
 }
 
-.sideDrawer a:hover,
-.sideDraer a:active {
+.sideLinks:hover,
+.sideLinks:active {
     font-size: 26px;
     animation: shake 0.5s;
     animation-iteration-count: .4;
@@ -57,8 +57,25 @@
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-@media (max-width: 550px){
+@media (min-width: 400px) and (max-width: 550px){
     .sideDrawer {
         width: 35%
     }
+}
+
+@media (max-width: 400px){
+    .sideDrawer {
+        width: 40%
+    }
+
+    .sideLinks{
+        font-size: 20px;
+    }
+
+    .sideLinks:hover,
+    .sideLinks:active {
+    font-size: 20px;
+    animation: shake 0.5s;
+    animation-iteration-count: .4;
+}
 }

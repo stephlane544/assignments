@@ -28,7 +28,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.sideDrawerOpen)
     return (
       <>
         <Navbar drawerClickHandler={this.drawerToggleClickHandler} />

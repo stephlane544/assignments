@@ -11,8 +11,8 @@ const SideDrawer = (props) => {
 
     return  (
         <div className={drawerClasses}>
-            <ul><a href='#projects' className='links navProjects'  to='/projects'>Projects</a></ul>
-            <ul><a href='#contact' className='links navContact' to='/contact'>Contact</a></ul>
+            <ul><a href='#projects' className='links sideLinks navProjects'  to='/projects'  onClick={props.drawerClickHandler}>Projects</a></ul>
+            <ul><a href='#contact' className='links sideLinks navContact' to='/contact'  onClick={props.drawerClickHandler}>Contact</a></ul>
         </div>
     )
 }
